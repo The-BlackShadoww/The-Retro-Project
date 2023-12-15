@@ -1,10 +1,11 @@
-import Exmple from "../components/Exmple";
+import { BrowserRouter } from "react-router-dom";
+import Routers from "../routes/Routers";
 
 function App() {
     return (
-        <div>
-            <Exmple />
-        </div>
+        <BrowserRouter>
+            <Routers />
+        </BrowserRouter>
     );
 }
 
