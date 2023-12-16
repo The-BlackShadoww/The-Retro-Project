@@ -1,12 +1,10 @@
 import React from "react";
-import Layout from "../../layouts/Layout";
-import Nav from "../../components/Navbar/Nav";
+import Hero from "../../components/Hero/Hero";
 
 const Home = () => {
     return (
         <div>
-            <Nav />
-            <Layout></Layout>
+           <Hero />
         </div>
     );
 };

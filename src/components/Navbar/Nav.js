@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import logo from "../../assests/images/logo(PNG).png";
 import "./Nav.css";
 import {
@@ -6,13 +6,19 @@ import {
     PersonIcon,
     ZoomInIcon,
     BackpackIcon,
-    Cross1Icon,
 } from "@radix-ui/react-icons";
+import SideNav from "./SideNav";
 
 const Nav = () => {
+    const [sideNav, setSideNav] = useState(false);
+
+    const siderHandler = () => {
+        setSideNav(!sideNav);
+    };
+
     return (
-        <>
-            <div className="flex justify-between items-center max-h-16 p-3 bg-purple-600">
+        <div className="">
+            <div className="flex justify-between items-center max-h-16 bg-purple-600">
                 <div className="basis-3/5 bg-indigo-800 items-center">
                     <img src={logo} alt="logo" className="max-h-9" />
                 </div>
@@ -26,33 +32,14 @@ const Nav = () => {
                     <span className="cursor-pointer">
                         <PersonIcon />
                     </span>
-                    <span className="cursor-pointer">
+                    <span onClick={siderHandler} className="cursor-pointer">
                         <HamburgerMenuIcon />
                     </span>
                 </div>
+                {/* Sider nav */}
+                <SideNav handler={sideNav} siderHandler={siderHandler} />
             </div>
-            <div className="akira bg-green-300 p-5 w-64 h-screen flex justify-center text-2xl">
-                <span className="cursor-pointer">
-                    <Cross1Icon />
-                </span>
-                <div>
-                    <ul>
-                        <li>
-                            <a href="#">Men</a>
-                        </li>
-                        <li>
-                            <a href="#">Women</a>
-                        </li>
-                        <li>
-                            <a href="#">Kids</a>
-                        </li>
-                        <li>
-                            <a href="#">New</a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </>
+        </div>
     );
 };
 
