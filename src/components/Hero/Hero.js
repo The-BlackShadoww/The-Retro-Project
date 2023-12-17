@@ -2,7 +2,7 @@ import React from "react";
 
 const Hero = () => {
     return (
-        <h1 className="bg-rose-700 h-screen">
+        <h1 className="h-screen">
             HeroHeroHeroHeroHeroHeroHeroHeroHeroHeroHeroHeroHeroHeroHeroHero
             Hero Hero Hero Hero Hero Hero Hero Hero Hero Hero Hero Hero Hero
             Hero Hero Hero Hero vHero Hero Hero Hero Hero Hero Hero Hero Hero

@@ -11,32 +11,12 @@ import { Text } from "@radix-ui/themes";
 import { Button, ButtonOutlined } from "../UI/Buttons/Button";
 
 const SideNav = ({ handler, siderHandler }) => {
-    const hide = (
-        <div className="akira bg-green-300 p-5 w-64 h-screen flex justify-center text-2xl fixed top-0 right-0 translate-x-full">
-            <span onClick={siderHandler} className="cursor-pointer">
-                <Cross1Icon />
-            </span>
-            <div>
-                <ul>
-                    <li>
-                        <a href="#">Men</a>
-                    </li>
-                    <li>
-                        <a href="#">Women</a>
-                    </li>
-                    <li>
-                        <a href="#">Kids</a>
-                    </li>
-                    <li>
-                        <a href="#">New</a>
-                    </li>
-                </ul>
-            </div>
-        </div>
-    );
-
     const show = (
-        <div className="bg-slate-200 p-5 w-64 h-screen text-1xl fixed top-0 right-0 transition-all">
+        <div
+            className={`bg-slate-200 p-5 w-64 h-screen text-1xl fixed top-0 right-0 transition-all ${
+                handler ? null : "translate-x-full"
+            }`}
+        >
             <div
                 onClick={siderHandler}
                 className="cursor-pointer w-full flex justify-end"
@@ -110,7 +90,7 @@ const SideNav = ({ handler, siderHandler }) => {
         </div>
     );
 
-    return <div>{handler ? show : hide}</div>;
+    return <div>{show}</div>;
 };
 
 export default SideNav;

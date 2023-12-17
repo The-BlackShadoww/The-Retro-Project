@@ -1,20 +1,22 @@
 import React from "react";
 import { Container } from "@radix-ui/themes";
 import { Outlet } from "react-router-dom";
-import './Layout.css'
+import "./Layout.css";
 import Footer from "../components/Footer/Footer";
 import Nav from "../components/Navbar/Nav";
 
 const Layout = () => {
     return (
-        <div className="akira bg-slate-400 relative overflow-x-hidden">
-            <div>
-                <Nav />
+        <div className="akira relative overflow-x-hidden">
+            <div className="p-4">
+                <div>
+                    <Nav />
+                </div>
+                <Container mt="5">
+                    <Outlet />
+                </Container>
             </div>
-            <Container>
-                <Outlet />
-            </Container>
-            <div>
+            <div className="mt-5 p-4 bg-black text-white">
                 <Footer />
             </div>
         </div>
