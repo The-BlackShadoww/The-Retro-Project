@@ -12,9 +12,9 @@ const Layout = () => {
                 <div>
                     <Nav />
                 </div>
-                <Container mt="5">
+                <div mt="5">
                     <Outlet />
-                </Container>
+                </div>
             </div>
             <div className="mt-5 p-4 bg-black text-white">
                 <Footer />
