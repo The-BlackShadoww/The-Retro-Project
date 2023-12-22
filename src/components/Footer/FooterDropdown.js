@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 
 const FooterDropdown = () => {
     return (
-        <div>
+        <div className="flex flex-col md:flex-row ">
             {/* -------- 1 ------- */}
             <Dropdown title={"Get help"}>
                 <ul>

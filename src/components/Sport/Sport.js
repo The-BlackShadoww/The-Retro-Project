@@ -1,36 +1,46 @@
 import React from "react";
-import { Swiper } from "../../lib/Swiper/Swiper";
-import SportImg_1 from "../../assests/images/sport-10.webp";
-import SportImg_2 from "../../assests/images/sport-1.webp";
-import SportImg_3 from "../../assests/images/sport-15.webp";
-import SportImg_4 from "../../assests/images/sport-14.webp";
+import { CardSwiper } from "../../lib/Swiper/Swiper";
 
 const Sport = () => {
     const arr = [
         {
             id: 1,
-            img: SportImg_2,
+            img: "/basketball",
             desTxt: "Basketball",
             path: "/signup",
             button: "Sign Up",
         },
         {
             id: 2,
-            img: SportImg_1,
+            img: "/tennis",
             desTxt: "Tennis",
             path: "/shop",
             button: "Shop",
         },
         {
             id: 2,
-            img: SportImg_3,
+            img: "/golf",
             desTxt: "Golf",
             path: "/shop",
             button: "Shop",
         },
         {
             id: 2,
-            img: SportImg_4,
+            img: "/training",
+            desTxt: "Training",
+            path: "/shop",
+            button: "Shop",
+        },
+        {
+            id: 2,
+            img: "/training",
+            desTxt: "Training",
+            path: "/shop",
+            button: "Shop",
+        },
+        {
+            id: 2,
+            img: "/training",
             desTxt: "Training",
             path: "/shop",
             button: "Shop",
@@ -42,7 +52,7 @@ const Sport = () => {
                 <h1>Shop by Sport</h1>
             </div>
             <div>
-                <Swiper arr={arr} />
+                <CardSwiper arr={arr} />
             </div>
         </section>
     );

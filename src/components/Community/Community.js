@@ -1,14 +1,14 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import { SwiperLayard } from "../../lib/Swiper/Swiper";
-import CommunityImg from "../../assests/images/giftImg-1 (1).jpg";
-import CommunityImg2 from "../../assests/images/giftImg-2.jpg";
+import { CardSwiperLg } from "../../lib/Swiper/Swiper";
+import "../../assests/styles/global.css";
+import { ThickArrowRightIcon, ThickArrowLeftIcon } from "@radix-ui/react-icons";
 
 const Community = () => {
     const arr = [
         {
             id: 1,
-            img: CommunityImg,
+            img: "/banner",
             smTxt: "Best of Retro",
             bigTxt: "It's better as a member",
             path: "/signup",
@@ -16,23 +16,45 @@ const Community = () => {
         },
         {
             id: 2,
-            img: CommunityImg2,
+            img: "/women",
             smTxt: "Member Product",
             bigTxt: "Your Exclusive Access",
             path: "/shop",
             button: "Shop",
         },
+        {
+            id: 2,
+            img: "/community-3",
+            smTxt: "Member Product",
+            bigTxt: "Your Exclusive Access",
+            path: "/shop",
+            button: "Shop",
+        },
+        {
+            id: 1,
+            img: "/community-2",
+            smTxt: "Best of Retro",
+            bigTxt: "It's better as a member",
+            path: "/signup",
+            button: "Sign Up",
+        },
+        {
+            id: 1,
+            img: "/Retro/community-4_hhlp80",
+            smTxt: "Best of Retro",
+            bigTxt: "It's better as a member",
+            path: "/signup",
+            button: "Sign Up",
+        },
     ];
+
     return (
         <section className="mt-24">
-            <div className="mb-7 flex justify-between items-center">
+            <span className="mb-7 -z-10">
                 <h1>Retro Membership</h1>
-                <Link to="/" className="text-sm">
-                    Sign up
-                </Link>
-            </div>
+            </span>
             <div>
-                <SwiperLayard arr={arr} />
+                <CardSwiperLg arr={arr} />
             </div>
         </section>
     );

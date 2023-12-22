@@ -1,33 +1,41 @@
 import React from "react";
-import IconicImg from "../../assests/images/iconic-1.webp";
-import IconicImg2 from "../../assests/images/iconic-3.jpeg";
-import IconicImg3 from "../../assests/images/iconic-6.webp";
-import IconicImg4 from "../../assests/images/iconic-8.webp";
-import { Swiper } from "../../lib/Swiper/Swiper";
+import { CardSwiper } from "../../lib/Swiper/Swiper";
 
 const Iconic = () => {
     const arr = [
         {
             id: 1,
-            img: IconicImg,
+            img: "/Retro/shoe-2",
             desTxt: "Air jordan 1",
             path: "/jordan",
         },
         {
             id: 2,
-            img: IconicImg2,
+            img: "/Retro/shoe-2",
             desTxt: "Air jordan 1",
             path: "/air",
         },
         {
             id: 3,
-            img: IconicImg3,
+            img: "/Retro/shoe-4",
             desTxt: "Air jordan 1",
             path: "/",
         },
         {
             id: 3,
-            img: IconicImg4,
+            img: "/Retro/shoe-7",
+            desTxt: "Air jordan 1",
+            path: "/",
+        },
+        {
+            id: 3,
+            img: "/Retro/shoe-4",
+            desTxt: "Air jordan 1",
+            path: "/",
+        },
+        {
+            id: 3,
+            img: "/Retro/shoe-6",
             desTxt: "Air jordan 1",
             path: "/",
         },
@@ -38,7 +46,7 @@ const Iconic = () => {
                 <h1>Always Iconic</h1>
             </div>
             <div className="">
-                <Swiper arr={arr} />
+                <CardSwiper arr={arr} />
             </div>
         </section>
     );

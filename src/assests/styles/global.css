@@ -1,8 +1,14 @@
 @font-face {
+    font-family: "Roboto";
+    src: url("../fonts/Roboto/Roboto-Regular.ttf") format("truetype");
     font-family: "Akira";
     src: url("../fonts/Akira Expanded Demo.otf") format("truetype");
 }
 
 .akira {
     font-family: "Akira", sans-serif;
+}
+
+.roboto {
+    font-family: "Roboto", sans-serif;
 }

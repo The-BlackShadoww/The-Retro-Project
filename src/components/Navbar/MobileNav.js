@@ -1,5 +1,5 @@
-import React, { useEffect, useRef, useState } from "react";
-import "./Nav.css";
+import React, { useRef, useState } from "react";
+import { Link } from "react-router-dom";
 import SideNav from "./SideNav";
 import Searchbar from "./Searchbar";
 import logo from "../../assests/images/logo(PNG).png";
@@ -7,9 +7,8 @@ import magnifyingGlassIcon from "../../assests/images/magnifyingIcon.png";
 import userIcon from "../../assests/images/userIcon.png";
 import bagIcon from "../../assests/images/bagIcon.png";
 import hamburgerIcon from "../../assests/images/hamburgerIcon.png";
-import { Link } from "react-router-dom";
 
-const Nav = () => {
+const MobileNav = () => {
     const [sideNav, setSideNav] = useState(false);
     const [search, setSearch] = useState(false);
 
@@ -27,11 +26,11 @@ const Nav = () => {
             searchInputRef.current.focus();
         }
     };
-
     return (
         <>
-            <div className="w-full h-16 flex items-center ">
+            <div className="w-full bg-slate-300">
                 <div className="w-full flex justify-between items-center max-h-16 ">
+                    {/* Logo */}
                     <div className="items-center ">
                         <Link to="/">
                             <img src={logo} alt="logo" className="h-14" />
@@ -81,4 +80,4 @@ const Nav = () => {
     );
 };
 
-export default Nav;
+export default MobileNav;

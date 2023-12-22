@@ -1,0 +1,40 @@
+<div className="flex flex-col">
+                                <Link to="">Winter Sale</Link>
+                                <Link to="">Shop up to 50% off</Link>
+                            </div>
+                            <div className="flex flex-col">
+                                <Link to="">New & Featured</Link>
+                                <Link to="">Link</Link>
+                                <Link to="">Link</Link>
+                                <Link to="">Link</Link>
+                                <Link to="">Link</Link>
+                                <Link to="">Link</Link>
+                                <Link to="">Link</Link>
+                            </div>
+                            <div className="flex flex-col">
+                                <Link to="">All the Shoes</Link>
+                                <Link to="">Link</Link>
+                                <Link to="">Link</Link>
+                                <Link to="">Link</Link>
+                                <Link to="">Link</Link>
+                                <Link to="">Link</Link>
+                                <Link to="">Link</Link>
+                            </div>
+                            <div className="flex flex-col">
+                                <Link to="">All the Clothes</Link>
+                                <Link to="">Link</Link>
+                                <Link to="">Link</Link>
+                                <Link to="">Link</Link>
+                                <Link to="">Link</Link>
+                                <Link to="">Link</Link>
+                                <Link to="">Link</Link>
+                            </div>
+                            <div className="flex flex-col">
+                                <Link to="">Jordan</Link>
+                                <Link to="">Link</Link>
+                                <Link to="">Link</Link>
+                                <Link to="">Link</Link>
+                                <Link to="">Link</Link>
+                                <Link to="">Link</Link>
+                                <Link to="">Link</Link>
+                            </div>

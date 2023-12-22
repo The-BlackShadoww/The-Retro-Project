@@ -1,10 +1,10 @@
 import React from "react";
-import "./Text.css";
+import "../../../assests/styles/global.css";
 
 export const DescriptiveText = ({ children }) => {
     return (
         <div className="roboto">
-            <p className="text-lg ">{children}</p>
+            <p className="text-lg">{children}</p>
         </div>
     );
 };

@@ -1,10 +1,10 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import "./Buttons.css";
+import "../../../assests/styles/global.css";
 
 export const Button = ({ children, path }) => {
     return (
-        <button className="roboto text-sm font-bold text-white bg-black p-3 mr-1 my-2 rounded-3xl transition-all hover:opacity-50">
+        <button className="roboto text-white text-sm bg-black  px-8 py-2 mx-1 md:my-0 my-2 rounded-full transition-all hover:opacity-50">
             <Link to={path}>{children}</Link>
         </button>
     );

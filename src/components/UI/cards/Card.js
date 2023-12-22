@@ -2,22 +2,15 @@ import React from "react";
 import { Link } from "react-router-dom";
 import { DescriptiveText, SmallText } from "../Texts/Text";
 import { ButtonWhite } from "../Buttons/Button";
+import { Card, CardLg } from "../Media/AdvancedImg";
 
 //!--------- Card 1 ---------
 export const SwiperSlides = ({ item }) => {
     const cards = (
         <Link to={item.path}>
-            <div className="" style={{ width: "97%" }}>
+            <div className="w-[97%]">
                 <div>
-                    <img
-                        src={item.img}
-                        alt="img"
-                        className="w-full object-cover"
-                        style={{
-                            height: 300,
-                            backgroundPosition: "center",
-                        }}
-                    />
+                    <Card img={item.img} />
                 </div>
                 <div>
                     <span>
@@ -35,21 +28,17 @@ export const SwiperSlides = ({ item }) => {
 };
 
 //!--------- Card 2 ---------
-export const SwiperSlidesLayard = ({ item }) => {
+export const SwiperSlidesLayard = ({ item, windowWidth }) => {
     const cards = (
         <Link to={item.path}>
-            <div className="relative overflow-hidden" style={{ width: "95%" }}>
-                <div className="absolute bottom-5 left-7 text-white">
+            <div className="relative w-[97%]">
+                <div className="absolute bottom-5 left-7 md:bottom-10 md:left-10 text-white">
                     <p className="text-sm">{item.smTxt}</p>
                     <p className="mb-5 mt-1">{item.bigTxt}</p>
                     <ButtonWhite path={item.path}>{item.button}</ButtonWhite>
                 </div>
-                <div className="w-full h-96">
-                    <img
-                        src={item.img}
-                        alt="img"
-                        className="w-full h-full object-cover bg-center"
-                    />
+                <div className={``}>
+                    <CardLg img={item.img} />
                 </div>
             </div>
         </Link>

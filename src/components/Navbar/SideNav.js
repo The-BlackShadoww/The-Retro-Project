@@ -15,7 +15,7 @@ const SideNav = ({ handler, siderHandler }) => {
         <div
             className={`bg-slate-200 p-5 w-64 h-screen text-1xl fixed top-0 right-0 transition-all ${
                 handler ? null : "translate-x-full"
-            }`}
+            } z-[100]`}
         >
             <div
                 onClick={siderHandler}

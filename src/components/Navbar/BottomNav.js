@@ -5,7 +5,8 @@ import { Dropdown } from "../UI/Dropdowns/Dropdown";
 
 const BottomNav = () => {
     const dropDowns = (
-        <div className="grid grid-cols-1 md:grid-cols-4 md:gap-5">
+        // <div className="grid grid-cols-1 md:grid-cols-4 md:gap-5 md:mx-auto md:w-[100%] lg:w-[50%] lg:p-5">
+        <div className="grid grid-cols-1 md:grid-cols-4 md:gap-5 md:mx-auto w-full xl:w-container_70 lg:p-5">
             {/* 1 */}
             <Dropdown title="Featured">
                 <ul className="md:py-2 md:px-0 p-5">

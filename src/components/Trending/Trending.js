@@ -1,26 +1,39 @@
 import React from "react";
-import {Swiper} from "../../lib/Swiper/Swiper";
-import HeroImg from "../../assests/images/heroImg.jpg";
+import { CardSwiper } from "../../lib/Swiper/Swiper";
 
 const Trending = () => {
     const arr = [
         {
             id: 1,
-            img: HeroImg,
+            img: "/Retro/trending-1",
             desTxt: "Some random texts in details",
             smTxt: "some small txt",
             path: "/",
         },
         {
             id: 2,
-            img: HeroImg,
+            img: "/Retro/trending-1",
             desTxt: "Some random texts in details",
             smTxt: "some small txt",
             path: "/",
         },
         {
             id: 3,
-            img: HeroImg,
+            img: "/Retro/trending-1",
+            desTxt: "Some random texts in details",
+            smTxt: "some small txt",
+            path: "/",
+        },
+        {
+            id: 3,
+            img: "/Retro/trending-1",
+            desTxt: "Some random texts in details",
+            smTxt: "some small txt",
+            path: "/",
+        },
+        {
+            id: 3,
+            img: "/Retro/trending-1",
             desTxt: "Some random texts in details",
             smTxt: "some small txt",
             path: "/",
@@ -33,7 +46,7 @@ const Trending = () => {
                 <h1>Trending</h1>
             </div>
             <div className="">
-                <Swiper arr={arr} />
+                <CardSwiper arr={arr} />
             </div>
         </div>
     );

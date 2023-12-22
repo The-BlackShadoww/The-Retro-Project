@@ -6,7 +6,7 @@ const Searchbar = ({ isSearch, searchHandler, searchInputRef }) => {
         <div
             className={`w-full h-screen fixed top-0 left-0 p-3 bg-white transition-all ${
                 isSearch ? null : "-translate-x-full"
-            }`}
+            } z-[100]`}
         >
             <div className="flex justify-between items-center">
                 <div className="flex justify-between items-center  bg-slate-200 rounded-full">
