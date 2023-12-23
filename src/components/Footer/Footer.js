@@ -1,6 +1,11 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import FooterDropdown from "./FooterDropdown";
+import {
+    FacebookIcon,
+    InstagramIcon,
+    YoutubeIcon,
+} from "../../assests/icons/Icons";
 
 const Footer = () => {
     return (
@@ -44,13 +49,13 @@ const Footer = () => {
                 {/* social icons */}
                 <div className="flex my-8 md:my-0 md:col-span-1 md:justify-end">
                     <Link href="#" className="mr-2">
-                        Instagram icon
+                        <FacebookIcon />
                     </Link>
                     <Link href="#" className="mr-2">
-                        Twitter icon
+                        <InstagramIcon />
                     </Link>
                     <Link href="#" className="">
-                        Discord icon
+                        <YoutubeIcon />
                     </Link>
                 </div>
             </div>

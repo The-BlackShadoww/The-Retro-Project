@@ -1,5 +1,13 @@
 import React from "react";
 import { Button, ButtonOutlined } from "../UI/Buttons/Button";
+import {
+    CaretRightIcon,
+    CloseIcon,
+    BagIcon,
+    FileIcon,
+    StoreIcon,
+    QuestionIcon,
+} from "../../assests/icons/Icons";
 
 const SideNav = ({ handler, siderHandler }) => {
     const show = (
@@ -12,7 +20,7 @@ const SideNav = ({ handler, siderHandler }) => {
                 onClick={siderHandler}
                 className="cursor-pointer w-full flex justify-end"
             >
-                Cross icon
+                <CloseIcon />
             </div>
             <div className="mt-4">
                 <div className="flex flex-col">
@@ -20,25 +28,25 @@ const SideNav = ({ handler, siderHandler }) => {
                         href="https://learnwithsumit.com/"
                         className="flex justify-between items-center"
                     >
-                        Men Right icon
+                        Men <CaretRightIcon />
                     </a>
                     <a
                         href="https://learnwithsumit.com/"
                         className="flex justify-between items-center mt-3"
                     >
-                        Women Right icon
+                        Women <CaretRightIcon />
                     </a>
                     <a
                         href="https://learnwithsumit.com/"
                         className="flex justify-between items-center mt-3"
                     >
-                        Kids Right icon
+                        Kids <CaretRightIcon />
                     </a>
                     <a
                         href="https://learnwithsumit.com/"
                         className="flex justify-between items-center mt-3"
                     >
-                        New & Featured Right icon
+                        New & Featured <CaretRightIcon />
                     </a>
                 </div>
 
@@ -55,28 +63,36 @@ const SideNav = ({ handler, siderHandler }) => {
                         href="https://learnwithsumit.com/"
                         className="text-sm mt-3 flex items-center"
                     >
-                        <span className="mr-4">Bag icon</span>
+                        <span className="mr-4">
+                            <BagIcon />
+                        </span>
                         Bag
                     </a>
                     <a
                         href="https://learnwithsumit.com/"
                         className="text-sm mt-3 flex items-center"
                     >
-                        <span className="mr-4">Box icon</span>
+                        <span className="mr-4">
+                            <FileIcon />
+                        </span>
                         Orders
                     </a>
                     <a
                         href="https://learnwithsumit.com/"
                         className="text-sm mt-3 flex items-center"
                     >
-                        <span className="mr-4">ZoomInIcon</span>
+                        <span className="mr-4">
+                            <StoreIcon />
+                        </span>
                         Find a store
                     </a>
                     <a
                         href="https://learnwithsumit.com/"
                         className="text-sm mt-3 flex items-center"
                     >
-                        <span className="mr-4">QuestionMarkCircledIcon</span>
+                        <span className="mr-4">
+                            <QuestionIcon />
+                        </span>
                         Help
                     </a>
                 </div>

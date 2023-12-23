@@ -1,8 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import "../Nav.css";
-import CloseIcon from "../../../assests/icons/CloseIcon";
-import MagnifyingGlassIcon from "../../../assests/icons/MagnifyingGlassIcon";
+import { MagnifyingGlassIcon, CloseIcon } from "../../../assests/icons/Icons";
 
 const Search = () => {
     return (
