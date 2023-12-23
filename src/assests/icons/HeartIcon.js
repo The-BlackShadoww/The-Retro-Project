@@ -2,7 +2,7 @@ import React from "react";
 
 const HeartIcon = () => {
     return (
-        <span className="mx-2">
+        <span className="mx-2 cursor-pointer">
             <svg
                 aria-hidden="true"
                 class="pre-nav-design-icon"

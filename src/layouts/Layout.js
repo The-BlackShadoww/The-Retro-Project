@@ -1,5 +1,4 @@
 import React from "react";
-import { Container } from "@radix-ui/themes";
 import { Outlet } from "react-router-dom";
 import "../assests/styles/global.css";
 import Footer from "../components/Footer/Footer";

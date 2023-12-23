@@ -3,6 +3,10 @@
         visibility 0ms linear 0.1s;
 }
 
+.transform {
+    transform: translateX(0) translateX(-50vw) translateX(488px);
+}
+
 /* .dropdown_container {
     white-space: nowrap;
     opacity: 0;

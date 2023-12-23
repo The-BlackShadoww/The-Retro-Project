@@ -1,8 +1,6 @@
 import React from "react";
-import { Link } from "react-router-dom";
 import { CardSwiperLg } from "../../lib/Swiper/Swiper";
 import "../../assests/styles/global.css";
-import { ThickArrowRightIcon, ThickArrowLeftIcon } from "@radix-ui/react-icons";
 
 const Community = () => {
     const arr = [

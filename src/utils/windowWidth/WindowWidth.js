@@ -10,7 +10,7 @@ export const WindowWidth = ({ screen, src_lg, srt_sm }) => {
         };
         window.addEventListener("resize", handleWidth);
         return () => window.removeEventListener("resize", handleWidth);
-    }, []);
+    }, [screen]);
 
     const img = windowWidth ? srt_sm : src_lg;
 

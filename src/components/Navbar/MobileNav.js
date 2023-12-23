@@ -48,10 +48,16 @@ const MobileNav = () => {
                                 className="h-6"
                             />
                         </span>
-                        <a href="#" className="cursor-pointer">
+                        <a
+                            href="https://learnwithsumit.com/"
+                            className="cursor-pointer"
+                        >
                             <img src={bagIcon} alt="magnify" className="h-6" />
                         </a>
-                        <a href="#" className="cursor-pointer">
+                        <a
+                            href="https://learnwithsumit.com/"
+                            className="cursor-pointer"
+                        >
                             <img
                                 src={userIcon}
                                 alt="user icon"

@@ -25,26 +25,29 @@ const SideNav = ({ handler, siderHandler }) => {
             </div>
             <div className="mt-4">
                 <div className="flex flex-col">
-                    <a href="#" className="flex justify-between items-center">
+                    <a
+                        href="https://learnwithsumit.com/"
+                        className="flex justify-between items-center"
+                    >
                         Men
                         <ChevronRightIcon />
                     </a>
                     <a
-                        href="#"
+                        href="https://learnwithsumit.com/"
                         className="flex justify-between items-center mt-3"
                     >
                         Women
                         <ChevronRightIcon />
                     </a>
                     <a
-                        href="#"
+                        href="https://learnwithsumit.com/"
                         className="flex justify-between items-center mt-3"
                     >
                         Kids
                         <ChevronRightIcon />
                     </a>
                     <a
-                        href="#"
+                        href="https://learnwithsumit.com/"
                         className="flex justify-between items-center mt-3"
                     >
                         New & Featured
@@ -61,25 +64,37 @@ const SideNav = ({ handler, siderHandler }) => {
                 </div>
 
                 <div className="mt-16">
-                    <a href="#" className="text-sm mt-3 flex items-center">
+                    <a
+                        href="https://learnwithsumit.com/"
+                        className="text-sm mt-3 flex items-center"
+                    >
                         <span className="mr-4">
                             <BackpackIcon />
                         </span>
                         Bag
                     </a>
-                    <a href="#" className="text-sm mt-3 flex items-center">
+                    <a
+                        href="https://learnwithsumit.com/"
+                        className="text-sm mt-3 flex items-center"
+                    >
                         <span className="mr-4">
                             <BoxIcon />
                         </span>
                         Orders
                     </a>
-                    <a href="#" className="text-sm mt-3 flex items-center">
+                    <a
+                        href="https://learnwithsumit.com/"
+                        className="text-sm mt-3 flex items-center"
+                    >
                         <span className="mr-4">
                             <ZoomInIcon />
                         </span>
                         Find a store
                     </a>
-                    <a href="#" className="text-sm mt-3 flex items-center">
+                    <a
+                        href="https://learnwithsumit.com/"
+                        className="text-sm mt-3 flex items-center"
+                    >
                         <span className="mr-4">
                             <QuestionMarkCircledIcon />
                         </span>

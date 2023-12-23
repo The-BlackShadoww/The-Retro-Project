@@ -19,7 +19,7 @@ const FooterDropdown = () => {
                     </li>
                     <li>
                         <a
-                            href="#"
+                            href="https://learnwithsumit.com/"
                             style={{ fontSize: 7 }}
                             className="text-gray-400"
                         >
@@ -33,7 +33,7 @@ const FooterDropdown = () => {
                 <ul>
                     <li>
                         <a
-                            href="#"
+                            href="https://learnwithsumit.com/"
                             style={{ fontSize: 7 }}
                             className="text-gray-400"
                         >
@@ -42,7 +42,7 @@ const FooterDropdown = () => {
                     </li>
                     <li>
                         <a
-                            href="#"
+                            href="https://learnwithsumit.com/"
                             style={{ fontSize: 7 }}
                             className="text-gray-400"
                         >
@@ -56,7 +56,7 @@ const FooterDropdown = () => {
                 <ul>
                     <li>
                         <a
-                            href="#"
+                            href="https://learnwithsumit.com/"
                             style={{ fontSize: 7 }}
                             className="text-gray-400"
                         >
@@ -65,7 +65,7 @@ const FooterDropdown = () => {
                     </li>
                     <li>
                         <a
-                            href="#"
+                            href="https://learnwithsumit.com/"
                             style={{ fontSize: 7 }}
                             className="text-gray-400"
                         >

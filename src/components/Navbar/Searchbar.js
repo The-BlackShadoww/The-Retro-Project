@@ -11,7 +11,11 @@ const Searchbar = ({ isSearch, searchHandler, searchInputRef }) => {
             <div className="flex justify-between items-center">
                 <div className="flex justify-between items-center  bg-slate-200 rounded-full">
                     <span className="p-2 bg-slate-300 rounded-full">
-                        <img src={magnifyingGlassIcon} className="h-5" />
+                        <img
+                            src={magnifyingGlassIcon}
+                            className="h-5"
+                            alt="img"
+                        />
                     </span>
                     <input
                         type="text"
@@ -28,16 +32,16 @@ const Searchbar = ({ isSearch, searchHandler, searchInputRef }) => {
                 <h6 className="text-gray-500">Popular Search Terms</h6>
                 <ul className="mt-4">
                     <li>
-                        <a href="#">Air Force 1</a>
+                        <a href="https://learnwithsumit.com/">Air Force 1</a>
                     </li>
                     <li>
-                        <a href="#">Jordan</a>
+                        <a href="https://learnwithsumit.com/">Jordan</a>
                     </li>
                     <li>
-                        <a href="#">Air Max</a>
+                        <a href="https://learnwithsumit.com/">Air Max</a>
                     </li>
                     <li>
-                        <a href="#">Blazer</a>
+                        <a href="https://learnwithsumit.com/">Blazer</a>
                     </li>
                 </ul>
             </div>

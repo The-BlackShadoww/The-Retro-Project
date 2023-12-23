@@ -9,7 +9,7 @@ const DropdownLinks = () => {
             {/* New and Featured */}
             <Dropdown title={"New & Featured"} path={"/new"}>
                 <div className="flex flex-col">
-                    <Link to="">Winter Sale</Link>
+                    <Link to="" className="font-bold">Winter Sale</Link>
                     <Link to="">Shop up to 50% off</Link>
                 </div>
                 <div className="flex flex-col">

@@ -4,34 +4,40 @@ import { Link } from "react-router-dom";
 import "../../../assests/styles/global.css";
 import "../Nav.css";
 import DropdownLinks from "./DropdownLinks";
-import HeartIcon from "../../../assests/icons/HeartIcon";
-import BagIcon from "../../../assests/icons/BagIcon";
-import MagnifyingGlassIcon from "../../../assests/icons/MagnifyingGlassIcon";
+import Search from "./Search";
 
 const DesktopNav = () => {
     return (
-        <div className="w-full h-[60px] z-[2] roboto bg-white">
+        <div className="w-full h-[60px] z-[2] Poppins bg-white">
             <div className="flex justify-between items-center tablet:px-12">
                 <div className="basis-1/4">
-                    <Link to="/">
-                        <img src={logo} alt="logo" className="h-14" />
-                    </Link>
+                    <span>
+                        <Link to="/">
+                            <img src={logo} alt="logo" className="h-14" />
+                        </Link>
+                    </span>
                 </div>
                 {/* Navigation */}
                 <div className="basis-2/4">
                     <DropdownLinks />
                 </div>
-                {/* Icons */}
-                <div className="basis-1/4 flex justify-end">
-                    <div className="mx-1">
+                {/* Search */}
+                <Search />
+
+                {/* Previous */}
+                {/* <div className="basis-1/4 flex justify-end items-center">
+                    <div className="flex px-2 py-2 mr-4 rounded-full bg-gray-100">
                         <MagnifyingGlassIcon />
-                       
+                        <input
+                            className="w-28 outline-none bg-transparent"
+                            placeholder="Search"
+                        />
                     </div>
-                    <div className="mx-1 flex">
+                    <div className="flex">
                         <HeartIcon />
                         <BagIcon />
                     </div>
-                </div>
+                </div> */}
             </div>
         </div>
     );

@@ -2,7 +2,7 @@ import React from "react";
 
 const MagnifyingGlassIcon = () => {
     return (
-        <span className="mx-2 cursor-pointer">
+        <span className="cursor-pointer">
             <svg
                 aria-hidden="true"
                 class="pre-nav-design-icon"

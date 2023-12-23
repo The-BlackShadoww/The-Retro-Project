@@ -31,7 +31,7 @@ const Dropdown = ({ title, path, children }) => {
         <div>
             <ul>
                 <li onMouseEnter={onMouseEnter} onMouseLeave={onMouseLeave}>
-                    <Link to={path} className="py-6 px-4">
+                    <Link to={path} className="py-6 px-4 font-semibold">
                         {title}
                     </Link>
                     {/* Dropdown container */}

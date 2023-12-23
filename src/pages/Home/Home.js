@@ -9,8 +9,6 @@ import Iconic from "../../components/Iconic/Iconic";
 import Community from "../../components/Community/Community";
 import Sport from "../../components/Sport/Sport";
 import BottomNav from "../../components/Navbar/BottomNav";
-import CloudinarySdk from "../../lib/Cloudinary/CloudinarySdk";
-import UploadWidget from "../../lib/Cloudinary/UploadWidget";
 
 const Home = () => {
     return (
@@ -28,8 +26,6 @@ const Home = () => {
                 <Sport />
                 <Community />
                 <BottomNav />
-                {/* <CloudinarySdk /> */}
-                {/* <UploadWidget /> */}
             </div>
         </main>
     );
