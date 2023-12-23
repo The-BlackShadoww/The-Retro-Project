@@ -1,13 +1,4 @@
 import React from "react";
-import {
-    Cross1Icon,
-    ChevronRightIcon,
-    BackpackIcon,
-    QuestionMarkCircledIcon,
-    ZoomInIcon,
-    BoxIcon,
-} from "@radix-ui/react-icons";
-import { Text } from "@radix-ui/themes";
 import { Button, ButtonOutlined } from "../UI/Buttons/Button";
 
 const SideNav = ({ handler, siderHandler }) => {
@@ -21,7 +12,7 @@ const SideNav = ({ handler, siderHandler }) => {
                 onClick={siderHandler}
                 className="cursor-pointer w-full flex justify-end"
             >
-                <Cross1Icon />
+                Cross icon
             </div>
             <div className="mt-4">
                 <div className="flex flex-col">
@@ -29,34 +20,30 @@ const SideNav = ({ handler, siderHandler }) => {
                         href="https://learnwithsumit.com/"
                         className="flex justify-between items-center"
                     >
-                        Men
-                        <ChevronRightIcon />
+                        Men Right icon
                     </a>
                     <a
                         href="https://learnwithsumit.com/"
                         className="flex justify-between items-center mt-3"
                     >
-                        Women
-                        <ChevronRightIcon />
+                        Women Right icon
                     </a>
                     <a
                         href="https://learnwithsumit.com/"
                         className="flex justify-between items-center mt-3"
                     >
-                        Kids
-                        <ChevronRightIcon />
+                        Kids Right icon
                     </a>
                     <a
                         href="https://learnwithsumit.com/"
                         className="flex justify-between items-center mt-3"
                     >
-                        New & Featured
-                        <ChevronRightIcon />
+                        New & Featured Right icon
                     </a>
                 </div>
 
                 <div className="mt-16 text-slate-600">
-                    <Text size="2">Become a Retro member</Text>
+                    <p>Become a Retro member</p>
                     <div className="mt-5 cursor-pointer">
                         <Button path="/join">Join Us</Button>
                         <ButtonOutlined path="/log">log in</ButtonOutlined>
@@ -68,36 +55,28 @@ const SideNav = ({ handler, siderHandler }) => {
                         href="https://learnwithsumit.com/"
                         className="text-sm mt-3 flex items-center"
                     >
-                        <span className="mr-4">
-                            <BackpackIcon />
-                        </span>
+                        <span className="mr-4">Bag icon</span>
                         Bag
                     </a>
                     <a
                         href="https://learnwithsumit.com/"
                         className="text-sm mt-3 flex items-center"
                     >
-                        <span className="mr-4">
-                            <BoxIcon />
-                        </span>
+                        <span className="mr-4">Box icon</span>
                         Orders
                     </a>
                     <a
                         href="https://learnwithsumit.com/"
                         className="text-sm mt-3 flex items-center"
                     >
-                        <span className="mr-4">
-                            <ZoomInIcon />
-                        </span>
+                        <span className="mr-4">ZoomInIcon</span>
                         Find a store
                     </a>
                     <a
                         href="https://learnwithsumit.com/"
                         className="text-sm mt-3 flex items-center"
                     >
-                        <span className="mr-4">
-                            <QuestionMarkCircledIcon />
-                        </span>
+                        <span className="mr-4">QuestionMarkCircledIcon</span>
                         Help
                     </a>
                 </div>

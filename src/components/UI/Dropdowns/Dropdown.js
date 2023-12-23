@@ -37,7 +37,6 @@
 //! --------- 2 ----------
 
 import React, { useState, useEffect } from "react";
-import { PlusIcon, MinusIcon } from "@radix-ui/react-icons";
 
 export const Dropdown = ({ title, children }) => {
     const [openDropdown, setOpenDropdown] = useState(false);
@@ -75,7 +74,7 @@ export const Dropdown = ({ title, children }) => {
             >
                 <h6 className="text-sm md:text-[10px] md:mb-2">{title}</h6>
                 <span className="md:hidden">
-                    {openDropdown ? <MinusIcon /> : <PlusIcon />}
+                    {openDropdown ? "MinusIcon" : "PlusIcon"}
                 </span>
             </div>
             <div style={isMobile ? mobileDropdownStyle : null}>{children}</div>

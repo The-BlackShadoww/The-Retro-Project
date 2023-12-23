@@ -1,6 +1,5 @@
 import React from "react";
 import { useSwiper } from "swiper/react";
-import { CaretLeftIcon, CaretRightIcon } from "@radix-ui/react-icons";
 
 //! ---------- SwiperButton -------------
 export const SwiperButton = ({ item }) => {
@@ -12,13 +11,13 @@ export const SwiperButton = ({ item }) => {
                 className="bg-gray-200 p-5 rounded-full mx-1 hover:bg-gray-300"
                 onClick={() => swiper.slidePrev()}
             >
-                <CaretLeftIcon />
+                CaretLeftIcon
             </button>
             <button
                 className="bg-gray-200 p-5 rounded-full mx-1 hover:bg-gray-300"
                 onClick={() => swiper.slideNext()}
             >
-                <CaretRightIcon />
+                CaretRightIcon
             </button>
         </div>
     );
@@ -34,13 +33,13 @@ export const SwiperButtonSm = ({ item }) => {
                 className="bg-indigo-800 z-10 p-4 rounded-full mx-1 hover:bg-gray-300 absolute top-2/4 left-[5%] -translate-y-1/2"
                 onClick={() => swiper.slidePrev()}
             >
-                <CaretLeftIcon />
+                CaretLeftIcon
             </button>
             <button
                 className="bg-indigo-200 z-10 p-4 rounded-full mx-1 hover:bg-gray-300 absolute top-2/4 right-[5%] -translate-y-1/2"
                 onClick={() => swiper.slideNext()}
             >
-                <CaretRightIcon />
+                CaretRightIcon
             </button>
         </div>
     );

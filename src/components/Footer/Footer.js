@@ -1,10 +1,5 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import {
-    InstagramLogoIcon,
-    TwitterLogoIcon,
-    DiscordLogoIcon,
-} from "@radix-ui/react-icons";
 import FooterDropdown from "./FooterDropdown";
 
 const Footer = () => {
@@ -49,13 +44,13 @@ const Footer = () => {
                 {/* social icons */}
                 <div className="flex my-8 md:my-0 md:col-span-1 md:justify-end">
                     <Link href="#" className="mr-2">
-                        <InstagramLogoIcon />
+                        Instagram icon
                     </Link>
                     <Link href="#" className="mr-2">
-                        <TwitterLogoIcon />
+                        Twitter icon
                     </Link>
                     <Link href="#" className="">
-                        <DiscordLogoIcon />
+                        Discord icon
                     </Link>
                 </div>
             </div>
