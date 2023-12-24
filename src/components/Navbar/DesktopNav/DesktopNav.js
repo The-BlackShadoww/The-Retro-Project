@@ -5,10 +5,11 @@ import "../../../assests/styles/global.css";
 import "../Nav.css";
 import DropdownLinks from "./DropdownLinks";
 import Search from "./Search";
+import { BagIcon, HeartIcon } from "../../../assests/icons/Icons";
 
 const DesktopNav = () => {
     return (
-        <div className="w-full h-[60px] z-[2] Poppins bg-white">
+        <div className="max-w-[1920px] max-h-[60px] z-[2] Poppins bg-white">
             <div className="flex justify-between items-center tablet:px-12">
                 <div className="basis-1/4">
                     <span>
@@ -22,7 +23,23 @@ const DesktopNav = () => {
                     <DropdownLinks />
                 </div>
                 {/* Search */}
-                <Search />
+                <div className="basis-1/4">
+                    <div className="">
+                        <Search />
+                    </div>
+                    <div className="inline-block pt-3">
+                        {/* display inline-flex and non */}
+                        <Link
+                            to=""
+                            className="relative overflow-hidden text-center items-center p-[6px] mr-3"
+                        >
+                            <HeartIcon />
+                        </Link>
+                        <Link>
+                            <BagIcon />
+                        </Link>
+                    </div>
+                </div>
 
                 {/* Previous */}
                 {/* <div className="basis-1/4 flex justify-end items-center">

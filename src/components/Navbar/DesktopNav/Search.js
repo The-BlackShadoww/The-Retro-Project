@@ -1,7 +1,13 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import "../Nav.css";
-import { MagnifyingGlassIcon, CloseIcon } from "../../../assests/icons/Icons";
+import {
+    MagnifyingGlassIcon,
+    CloseIcon,
+    BagIcon,
+    HeartIcon,
+} from "../../../assests/icons/Icons";
+import Image from "../../../assests/images/featuredImg-5.webp";
 
 const Search = () => {
     return (
@@ -13,7 +19,7 @@ const Search = () => {
                     {/* pre search contain --> Notice: there is transform here */}
                     <div className="w-full inline-block px-[144px] m-auto bg-white">
                         {/* Input Box --> Note: -translate-x-[50vw]*/}
-                        <div className="relative w-[656px] max-w-[656px] my-auto mx-0  transform float-right">
+                        <div className="relative w-[656px] max-w-[656px] my-auto mx-0 transform float-right">
                             {/* Visibility will be hidden and will be visible when nav is opened */}
                             <input
                                 className="w-full h-10 m-auto py-2 pl-[44px] pr-[50px] visible cursor-text bg-gray-100 text-inherit outline-none border-none rounded-full "
@@ -81,12 +87,20 @@ const Search = () => {
                         {/* There will a spinner in this div*/}
                         <div></div>
                         {/* pre-l-vs-results bg-white pt12-sm pt0-lg mb12-sm d-sm-flx flx-dir-sm-r flx-wr-sm-w flx-wr-lg-nw d-lg-flx */}
-                        <ul>
-                            <li>
+                        {/* There will be flex warp in small screen */}
+                        <ul className="w-[100% - 100px] flex flex-row flex-nowrap mb-12">
+                            <li className="w-1/5 pr-1">
                                 <Link>
                                     <figure>
                                         <div>
-                                            <img src="" alt="img" />
+                                            <img src={Image} alt="img" />
+                                        </div>
+                                    </figure>
+                                    <figure className="pr-3 mt-3">
+                                        <h4> Air jordan 1 low</h4>
+                                        <p>Men's shoe</p>
+                                        <div>
+                                            <p>$180</p>
                                         </div>
                                     </figure>
                                 </Link>
@@ -95,6 +109,18 @@ const Search = () => {
                     </div>
                 </div>
             </div>
+            {/* Icons */}
+            {/* <div className="inline-block pt-3">
+                <Link
+                    to=""
+                    className="relative overflow-hidden text-center items-center p-[6px] mr-3"
+                >
+                    <HeartIcon />
+                </Link>
+                <Link>
+                    <BagIcon />
+                </Link>
+            </div> */}
         </div>
     );
 };
