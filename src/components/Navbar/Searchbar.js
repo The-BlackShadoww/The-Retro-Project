@@ -8,7 +8,7 @@ const Searchbar = ({ isSearch, searchHandler, searchInputRef }) => {
                 isSearch ? null : "-translate-x-full"
             }`}
         >
-            <div className="relative w-full inline-block m-auto bg-red-600">
+            <div className="relative w-full inline-block m-auto">
                 <div className="relative w-[85%] h-[40px] rounded-full bg-slate-200">
                     <input
                         type="search"
@@ -24,7 +24,7 @@ const Searchbar = ({ isSearch, searchHandler, searchInputRef }) => {
                     </button>
                 </div>
                 <button
-                    className="absolute right-0 top-0 p-2 text-[16px] font-bold cursor-pointer"
+                    className="absolute right-0 top-0 p-2 mobile_sm:text-[16px] text-[12px] font-bold cursor-pointer"
                     onClick={searchHandler}
                 >
                     Cancel
