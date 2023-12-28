@@ -1,0 +1,13 @@
+{
+    "products": [
+        {
+            "id": 0,
+            "name": "product name",
+            "price": 0,
+            "category": "category",
+            "categoryId": "category_00",
+            "gender": "gender",
+            "img": "URL"
+        }
+    ]
+}

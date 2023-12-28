@@ -1,24 +1,26 @@
+input[type="search"]::-webkit-search-cancel-button {
+    -webkit-appearance: none;
+    appearance: none;
+    display: none;
+}
+
 .transition {
     transition: transform 0.1s ease, opacity 0ms linear 0.1s,
         visibility 0ms linear 0.1s;
 }
 
-.transform {
-    transform: translateX(0) translateX(-50vw) translateX(488px);
+.transform-0 {
+    transform: translateX(0);
 }
 
-/* .dropdown_container {
-    white-space: nowrap;
-    opacity: 0;
-    visibility: hidden;
+.transform-x {
+    transform: translateX(0) translateX(-50vw) translateX(350px);
+}
+
+.warper {
     position: absolute;
-    overflow: hidden;
-    max-height: 800px;
-    top: 60px;
+    top: 0;
     left: 0;
-    right: 0;
-    transition: transform 0.1s ease, opacity 0ms linear 0.1s,
-        visibility 0ms linear 0.1s;
-    transform-origin: top center;
-    transform: scaleY(0);
-} */
+    width: 100%;
+    z-index: 10;
+}

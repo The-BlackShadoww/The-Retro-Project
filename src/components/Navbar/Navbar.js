@@ -1,19 +1,34 @@
 import React from "react";
-import "./Nav.css";
-import MobileNav from "./MobileNav";
+import { Logo } from "../../assests/icons/Icons";
+import { BagIcon, HeartIcon } from "../../assests/icons/Icons";
+import { Link } from "react-router-dom";
+import "../../assests/styles/global.css";
 import DesktopNav from "./DesktopNav/DesktopNav";
+import Search from "./DesktopNav/Search";
+import MobileNav from "./MobileNav";
 
 const Navbar = () => {
     return (
-        <header>
-            <nav>
-                <div className="hidden md:block">
-                    <DesktopNav />
+        <header className="w-full h-[60px] relative z-[2] Poppins">
+            <div className="max-w-[1920px] max-h-[60px] mx-auto tablet:pr-[38px] tablet:pl-[36px] pr-3 pl-4 opacity-100 flex items-center">
+                <div className="z-[100] visible pl-3">
+                    <Link className="my-[1px] h-[59px] w-[59px] block">
+                        <Logo />
+                    </Link>
                 </div>
-                <div className="md:hidden block">
-                    <MobileNav />
+                <div className="w-[160px] flex-grow-[1] items-center">
+                    <nav>
+                        <MobileNav />
+                        <DesktopNav />
+                    </nav>
+                    <Search />
                 </div>
-            </nav>
+                {/* tablet:block hidden */}
+                <div className="tablet:flex hidden">
+                    <HeartIcon />
+                    <BagIcon />
+                </div>
+            </div>
         </header>
     );
 };

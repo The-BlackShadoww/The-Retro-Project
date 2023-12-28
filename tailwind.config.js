@@ -20,6 +20,7 @@ module.exports = {
                 container_95: "95%",
             },
             screens: {
+                tabletLg: "1150px",
                 tablet: "960px",
                 mobile: "640px",
                 mobile_sm: "600px",

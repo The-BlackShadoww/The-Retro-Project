@@ -9,7 +9,7 @@ const Layout = () => {
         <div className="akira relative overflow-x-hidden">
             <div>
                 {/* Be careful about the p-4 padding in every component */}
-                <div className="p-4 tablet:p-0 md:p-0">
+                <div className="tablet:p-0 md:p-0">
                     <Navbar />
                 </div>
                 <div>

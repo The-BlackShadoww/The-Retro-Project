@@ -1,126 +1,110 @@
-import React from "react";
-import { Link } from "react-router-dom";
+import React, { useState } from "react";
+import { CloseIcon, MagnifyingGlassIcon } from "../../../assests/icons/Icons";
 import "../Nav.css";
-import {
-    MagnifyingGlassIcon,
-    CloseIcon,
-    BagIcon,
-    HeartIcon,
-} from "../../../assests/icons/Icons";
-import Image from "../../../assests/images/featuredImg-5.webp";
+import { Link } from "react-router-dom";
 
 const Search = () => {
+    const [isSearching, setIsSearching] = useState(false);
+    const [input, setInput] = useState("");
+
+    const opener = () => {
+        setIsSearching(true);
+    };
+    const closer = () => {
+        setIsSearching(false);
+        setInput("");
+    };
+
+    const handleValue = (e) => {
+        setInput(e.target.value);
+    };
+
+    const removeValue = () => {
+        setInput("");
+    };
+
     return (
-        <div className="w-full h-[312px] inline-block absolute top-0 left-0 z-[5] px-4 text-start overflow-y-scroll bg-indigo-300">
-            {/* Search Box */}
-            <div className="max-w-[1920px] pt-3 m-auto bg-orange-600">
-                {/* Flex here */}
-                <div className="relative flex justify-end bg-red-500">
-                    {/* pre search contain --> Notice: there is transform here */}
-                    <div className="w-full inline-block px-[144px] m-auto bg-white">
-                        {/* Input Box --> Note: -translate-x-[50vw]*/}
-                        <div className="relative w-[656px] max-w-[656px] my-auto mx-0 transform float-right">
-                            {/* Visibility will be hidden and will be visible when nav is opened */}
-                            <input
-                                className="w-full h-10 m-auto py-2 pl-[44px] pr-[50px] visible cursor-text bg-gray-100 text-inherit outline-none border-none rounded-full "
-                                type="search"
-                                tabIndex="0"
-                                placeholder="Search"
-                            />
-                            <button className="absolute top-[2px] right-[2px] px-2 py-[6px] inline-flex rounded-full z-[2] text-center hover:bg-gray-200">
-                                <CloseIcon />
-                            </button>
-                            <button className="absolute top-[2px] left-[2px] px-2 py-[6px] flex items-center  rounded-full hover:bg-gray-200">
-                                <MagnifyingGlassIcon />
-                            </button>
-                        </div>
-                        <button className="absolute top-2 right-8 visible bg-transparent">
-                            Cancel
+        // tablet:block hidden
+        <div
+            className={`tablet:block hidden ${
+                isSearching ? "warper" : null
+            } bg-white`}
+        >
+            {/* Flex search box here */}
+            <div className="flex justify-end">
+                {/* Search contain */}
+                <div className="w-full inline-block m-auto pt-2 bg-white">
+                    {/* input box */}
+                    <div
+                        className={`relative ${
+                            isSearching
+                                ? "w-[656px] transform-x"
+                                : "w-48 transform-0"
+                        } my-auto mx-0 float-right transition-all`}
+                    >
+                        <input
+                            className={`w-full h-10 m-auto py-2 pl-[44px] pr-[50px] visible cursor-text bg-gray-100 text-inherit outline-none border-none rounded-full`}
+                            type="search"
+                            tabIndex="0"
+                            placeholder="Search"
+                            onKeyDownCapture={opener}
+                            onChange={handleValue}
+                            value={input}
+                        />
+                        {/* inline-flex and hidden */}
+                        <button
+                            className={`absolute top-[2px] right-[2px] px-2 py-[6px]  rounded-full z-[2] text-center hover:bg-gray-200 ${
+                                isSearching ? "inline-flex" : "hidden"
+                            }`}
+                            onClick={removeValue}
+                        >
+                            <CloseIcon />
+                        </button>
+                        <button className="absolute top-[2px] left-[2px] px-2 py-[6px] flex items-center  rounded-full hover:bg-gray-200">
+                            <MagnifyingGlassIcon />
                         </button>
                     </div>
+                    <button
+                        onClick={closer}
+                        className={`${
+                            isSearching ? "visible" : "invisible"
+                        } absolute top-2 right-8 font-bold p-4 bg-transparent cursor-pointer`}
+                    >
+                        Cancel
+                    </button>
                 </div>
-                {/* Links contain -- pre-l-vs-box ta-sm-l*/}
-                {/* Note: Animation TranslateY */}
-                <div className="pt-[46px] px-8 bg-green-400">
-                    <div className="max-w-[656px] mx-auto bg-blue-700">
-                        <p className="pb-4">Popular search items</p>
+            </div>
+            {/* Search result div */}
+            <div
+                className={`${
+                    isSearching ? "w-full" : "w-0"
+                }  max-h-[100vh] absolute top-[60px] ${
+                    isSearching ? "right-0" : "right-[-100%]"
+                } p-3 transition-all overflow-y-scroll bg-white`}
+            >
+                <div className="w-[656px] mx-auto p-8">
+                    <div className="">
+                        <p className="pb-4 font-bold">Popular search items</p>
                         <ul>
                             <li>
-                                <Link to="">Link 1</Link>
+                                <Link to="">product 1</Link>
                             </li>
                             <li>
-                                <Link to="">Link 2</Link>
+                                <Link to="">product 2</Link>
                             </li>
                             <li>
-                                <Link to="">Link 3</Link>
+                                <Link to="">product 3</Link>
                             </li>
                             <li>
-                                <Link to="">Link 4</Link>
+                                <Link to="">product 4</Link>
                             </li>
                             <li>
-                                <Link to="">Link 5</Link>
-                            </li>
-                        </ul>
-                    </div>
-                    {/* pre-l-vs-overlay bg-white u-full-width flx-dir-lg-r z1 d-lg-flx */}
-                    <div className="w-full flex flex-row bg-amber-400">
-                        <div className="w-[16.6666667%] pr-4 text-left flex flex-col">
-                            <p className="pb-4">Top Suggestions</p>
-                            <ul>
-                                <li>
-                                    <Link to="">Link 1</Link>
-                                </li>
-                                <li>
-                                    <Link to="">Link 2</Link>
-                                </li>
-                                <li>
-                                    <Link to="">Link 3</Link>
-                                </li>
-                                <li>
-                                    <Link to="">Link 4</Link>
-                                </li>
-                                <li>
-                                    <Link to="">Link 5</Link>
-                                </li>
-                            </ul>
-                        </div>
-                        {/* There will a spinner in this div*/}
-                        <div></div>
-                        {/* pre-l-vs-results bg-white pt12-sm pt0-lg mb12-sm d-sm-flx flx-dir-sm-r flx-wr-sm-w flx-wr-lg-nw d-lg-flx */}
-                        {/* There will be flex warp in small screen */}
-                        <ul className="w-[100% - 100px] flex flex-row flex-nowrap mb-12">
-                            <li className="w-1/5 pr-1">
-                                <Link>
-                                    <figure>
-                                        <div>
-                                            <img src={Image} alt="img" />
-                                        </div>
-                                    </figure>
-                                    <figure className="pr-3 mt-3">
-                                        <h4> Air jordan 1 low</h4>
-                                        <p>Men's shoe</p>
-                                        <div>
-                                            <p>$180</p>
-                                        </div>
-                                    </figure>
-                                </Link>
+                                <Link to="">product 5</Link>
                             </li>
                         </ul>
                     </div>
                 </div>
             </div>
-            {/* Icons */}
-            {/* <div className="inline-block pt-3">
-                <Link
-                    to=""
-                    className="relative overflow-hidden text-center items-center p-[6px] mr-3"
-                >
-                    <HeartIcon />
-                </Link>
-                <Link>
-                    <BagIcon />
-                </Link>
-            </div> */}
         </div>
     );
 };

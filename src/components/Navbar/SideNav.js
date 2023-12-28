@@ -12,9 +12,9 @@ import {
 const SideNav = ({ handler, siderHandler }) => {
     const show = (
         <div
-            className={`bg-slate-200 p-5 w-64 h-screen text-1xl fixed top-0 right-0 transition-all ${
+            className={`bg-white p-5 w-72 h-screen text-1xl fixed top-0 right-0 transition-all z-[100] ${
                 handler ? null : "translate-x-full"
-            } z-[100]`}
+            }`}
         >
             <div
                 onClick={siderHandler}
