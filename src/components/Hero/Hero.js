@@ -1,34 +1,50 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { Link } from "react-router-dom";
 import { Button } from "../UI/Buttons/Button";
 import { DescriptiveText } from "../UI/Texts/Text";
 import HeroBanner from "./HeroBanner";
+import { connect } from "react-redux";
+import { fetchHeroData } from "../../redux/Actions";
 
-const Hero = () => {
-    return (
-        <section className="">
+const mapStateToProps = (state) => {
+    return {
+        hero_section: state.hero_section,
+    };
+};
+
+const mapDispatchToProps = (dispatch) => {
+    return {
+        fetchHeroData: () => dispatch(fetchHeroData()),
+    };
+};
+
+const Hero = ({ fetchHeroData, hero_section }) => {
+    useEffect(() => {
+        fetchHeroData();
+    }, [fetchHeroData]);
+
+    const data = hero_section.data.map((d, i) => (
+        <section key={i}>
             <Link to="">
                 <div>
-                    <HeroBanner />
+                    <HeroBanner img_lg={d.img_lg} img_sm={d.img_sm} />
                     <div className="mt-3 tablet:text-center">
                         <h1 className="tablet:text-6xl text-3xl tablet:mt-12">
-                            New Arrivals to <br /> Discover
+                            {d.title}
                         </h1>
                         <div className="mt-7">
-                            <DescriptiveText>
-                                Enjoy the high quality experience
-                            </DescriptiveText>
+                            <DescriptiveText>{d.des_text}</DescriptiveText>
                         </div>
                     </div>
                 </div>
             </Link>
             <div className="w-full flex mt-8 tablet:justify-center">
-                <Button path={"/"}>Shop Men's</Button>
-                <Button path={"/"}>Shop Women's</Button>
-                <Button path={"/"}>Shop Kid's</Button>
+                <Button path={"/"}>Shop </Button>
             </div>
         </section>
-    );
+    ));
+
+    return data;
 };
 
-export default Hero;
+export default connect(mapStateToProps, mapDispatchToProps)(Hero);

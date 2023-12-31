@@ -1,7 +1,17 @@
-import React from "react";
+import React, { useState } from "react";
 import { MagnifyingGlassIcon, CloseIcon } from "../../assests/icons/Icons";
 
 const Searchbar = ({ isSearch, searchHandler, searchInputRef }) => {
+    const [input, setInput] = useState("");
+
+    const handleValue = (e) => {
+        setInput(e.target.value);
+    };
+    
+    const removeValue = () => {
+        setInput("");
+    };
+
     return (
         <div
             className={`w-full h-screen fixed top-0 left-0 p-3 bg-white transition-all z-[100] ${
@@ -13,13 +23,20 @@ const Searchbar = ({ isSearch, searchHandler, searchInputRef }) => {
                     <input
                         type="search"
                         placeholder="search"
+                        onChange={handleValue}
+                        value={input}
                         className="w-full h-10 m-auto py-2 pl-[44px] pr-[50px] visible cursor-text bg-gray-100 text-inherit outline-none border-none rounded-full placeholder:opacity-50 placeholder:text-sm"
                         ref={searchInputRef}
                     />
                     <button className="absolute left-0 top-0 p-2 bg-gray-200 hover:bg-gray-300 rounded-full">
                         <MagnifyingGlassIcon />
                     </button>
-                    <button className="absolute right-0 top-0 p-2 hover:bg-gray-300 rounded-full">
+                    <button
+                        className={`absolute right-0 top-0 p-2 hover:bg-gray-300 rounded-full ${
+                            input === "" ? "hidden" : "block"
+                        }`}
+                        onClick={removeValue}
+                    >
                         <CloseIcon />
                     </button>
                 </div>

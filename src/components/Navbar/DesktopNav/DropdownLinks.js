@@ -194,7 +194,7 @@ const DropdownLinks = () => {
                     </Dropdown>
                 </div>
                 {/* Accessories */}
-                <div className="tabletLg:block hidden">
+                <div className="tablet_lg:block hidden">
                     <Dropdown title={"Accessories"} path={"/accessories"}>
                         <div className="flex flex-col text-left">
                             <Link to="">Winter Sale</Link>

@@ -10,6 +10,7 @@ const Search = () => {
     const opener = () => {
         setIsSearching(true);
     };
+    
     const closer = () => {
         setIsSearching(false);
         setInput("");
