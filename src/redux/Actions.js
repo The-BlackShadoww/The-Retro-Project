@@ -1,15 +1,9 @@
-import * as actionTypes from "./ActionTypes";
-import { fetchHero } from "../services/actions";
+import { fetchHero } from "../services/apiActions";
+import { heroData } from "./ReduxToolkit/heroSlice";
 
-export const heroData = (data) => {
-    return {
-        type: actionTypes.FETCH_HERO_SECTION,
-        payload: data,
-    };
-};
+//! Hero Data
 export const fetchHeroData = () => (dispatch) => {
     fetchHero()
         .then((data) => dispatch(heroData(data)))
         .catch((error) => console.log(error));
 };
-

@@ -7,8 +7,8 @@ export const fetchHero = () => {
         axios
             .get(json_api + "hero_section")
             .then((response) => {
-                const heroData = response.data;
-                resolve(heroData);
+                const Data = response.data;
+                resolve(Data);
             })
             .catch((error) => {
                 reject(error);
