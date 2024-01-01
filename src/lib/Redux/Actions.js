@@ -1,5 +1,5 @@
-import { fetchHero } from "../services/apiActions";
-import { heroData } from "./ReduxToolkit/heroSlice";
+import { fetchHero } from "../../services/apiActions";
+import { heroData } from "../../redux/ReduxToolkit/heroSlice";
 
 //! Hero Data
 export const fetchHeroData = () => (dispatch) => {

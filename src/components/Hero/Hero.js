@@ -5,7 +5,7 @@ import { Button } from "../UI/Buttons/Button";
 import { DescriptiveText } from "../UI/Texts/Text";
 import HeroBanner from "./HeroBanner";
 import { connect } from "react-redux";
-import { fetchHeroData } from "../../redux/Actions";
+import { fetchData } from "../../lib/Redux/ReduxToolkit/heroSlice";
 
 const mapStateToProps = (state) => {
     return {
@@ -15,14 +15,14 @@ const mapStateToProps = (state) => {
 
 const mapDispatchToProps = (dispatch) => {
     return {
-        fetchHeroData: () => dispatch(fetchHeroData()),
+        fetchData: () => dispatch(fetchData()),
     };
 };
 
-const Hero = ({ fetchHeroData, hero_section }) => {
+const Hero = ({ fetchData, hero_section }) => {
     useEffect(() => {
-        fetchHeroData();
-    }, [fetchHeroData]);
+        fetchData();
+    }, [fetchData]);
 
     const content = hero_section.data.map((d, i) => (
         <section key={i}>
@@ -45,7 +45,12 @@ const Hero = ({ fetchHeroData, hero_section }) => {
         </section>
     ));
 
-    return content;
+    return (
+        <>
+            {hero_section.hasError ? <p>failed to fetch data</p> : null}
+            {content}
+        </>
+    );
 };
 
 export default connect(mapStateToProps, mapDispatchToProps)(Hero);
