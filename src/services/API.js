@@ -1,1 +1,1 @@
-export const json_api = "http://localhost:3001/";
+// export const JSON_API = process.env.JSON_SERVER;

@@ -1,7 +1,15 @@
 {
-    "hero_section": [
+    "hero": [
         {
             "id": 0,
+            "name": "hero section",
+            "title": "New arrivals to discover",
+            "des_text": "Enjoy the high quality experience",
+            "img_lg": "/Retro/heroBanner_r74rys",
+            "img_sm": "/Retro/heroBannerLong_fw837w"
+        },
+        {
+            "id": 1,
             "name": "hero section",
             "title": "New arrivals to discover",
             "des_text": "Enjoy the high quality experience",

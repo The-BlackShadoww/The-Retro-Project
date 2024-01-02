@@ -1,10 +1,13 @@
 import { configureStore } from "@reduxjs/toolkit";
-import heroSlice from "./ReduxToolkit/heroSlice";
+import { apiSlice } from "./ReduxToolkit/apiSlice";
 
 const RootReducer = configureStore({
     reducer: {
-        hero: heroSlice,
+        [apiSlice.reducerPath]: apiSlice.reducer,
     },
+    middleware: (getDefaultMiddleware) =>
+        getDefaultMiddleware().concat(apiSlice.middleware),
 });
 
 export default RootReducer;
+

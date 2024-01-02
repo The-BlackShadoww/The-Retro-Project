@@ -1,52 +1,40 @@
-import { createSlice } from "@reduxjs/toolkit";
-import { createAsyncThunk } from "@reduxjs/toolkit";
-import axios from "axios";
+import { apiSlice } from "./apiSlice";
+import { createSelector, createEntityAdapter } from "@reduxjs/toolkit";
 
-//* you have to dispatch this function from a component
-export const fetchData = createAsyncThunk(
-    "hero/fetchData",
-    async (data, thunkAPI) => {
-        try {
-            const response = await axios.get(
-                `http://localhost:3001/hero_section`
-            );
-            return response.data;
-        } catch (error) {
-            // throw error;
-            return thunkAPI.rejectWithValue(error.response.data);
-        }
-    }
-);
+const heroAdapter = createEntityAdapter();
 
-const heroSlice = createSlice({
-    name: "hero",
-    initialState: { data: [] },
-    reducers: {
-        heroData: (state, action) => {
-            //* Because of Immer we can writer this code
-            // return {
-            //     ...state,
-            //     data: action.payload,
-            // };
-            state.data = action.payload;
-        },
-    },
-    extraReducers: (builder) => {
-        builder.addCase(fetchData.pending, (state, action) => {
-            state.isLoading = true;
-            state.hasError = false;
-        });
-        builder.addCase(fetchData.fulfilled, (state, action) => {
-            state.data = action.payload;
-        });
-        builder.addCase(fetchData.rejected, (state, action) => {
-            state.isLoading = false;
-            state.hasError = true;
-        });
-    },
+const initialState = heroAdapter.getInitialState();
+
+export const extendedApiSlice = apiSlice.injectEndpoints({
+    endpoints: (builder) => ({
+        getHeroData: builder.query({
+            query: () => "/hero",
+            transformErrorResponse: (responseData) => {
+                return heroAdapter.setAll(initialState, responseData);
+            },
+            // providesTags: (result, error, arg) => [
+            //     { type: "Hero", id: "LIST" },
+            //     ...result.ids.map((id) => ({ type: "Hero", id })),
+            // ],
+        }),
+    }),
 });
 
-//! exporting named action creators separately from the reducer
-export const { heroData } = heroSlice.actions;
-//! exporting the reducer
-export default heroSlice.reducer;
+export const { useGetHeroDataQuery } = extendedApiSlice;
+
+//! returns the query result object
+export const selectResult = extendedApiSlice.endpoints.getHeroData.select();
+
+//! Creates memoized selector
+export const selectHeroData = createSelector(
+    selectResult,
+    (getResult) => getResult.data // normalized state object with ids & entities
+);
+
+//! getSelectors creates these selectors and we rename them with aliases using destructuring
+export const {
+    selectAll: selectAllHero,
+    selectById: selectHeroById,
+    selectEntities: selectHeroEntities,
+    selectTotal: selectHeroTotal,
+} = heroAdapter.getSelectors((state) => selectHeroData(state) ?? initialState);

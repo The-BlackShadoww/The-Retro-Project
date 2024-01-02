@@ -1,108 +1,63 @@
-// ! With Redux it works
-import React, { useEffect } from "react";
-import { Link } from "react-router-dom";
-import { Button } from "../UI/Buttons/Button";
-import { DescriptiveText } from "../UI/Texts/Text";
-import HeroBanner from "./HeroBanner";
-import { connect } from "react-redux";
-import { fetchData } from "../../lib/Redux/ReduxToolkit/heroSlice";
+import React from "react";
+import { useSelector } from "react-redux";
+import {
+    useGetHeroDataQuery,
+    selectAllHero,
+} from "../../lib/Redux/ReduxToolkit/heroSlice";
 
-const mapStateToProps = (state) => {
-    return {
-        hero_section: state.hero,
-    };
+const Hero = () => {
+    const {
+        data: heroData,
+        isLoading,
+        isError,
+        isSuccess,
+        error,
+    } = useGetHeroDataQuery();
+
+    const allHeroes = useSelector(selectAllHero);
+
+    // const data = allHeroes.map((d) => <p>{d.name}</p>);
+
+    let content;
+    if (isLoading) {
+        content = <p>Loading...</p>;
+    } else if (isSuccess) {
+        // content = JSON.stringify(heroData);
+        content = JSON.stringify(allHeroes);
+        // content = data;
+    } else if (isError) {
+        content = <p>{error}</p>;
+    }
+
+    return <>{content}</>;
 };
 
-const mapDispatchToProps = (dispatch) => {
-    return {
-        fetchData: () => dispatch(fetchData()),
-    };
-};
+export default Hero;
 
-const Hero = ({ fetchData, hero_section }) => {
-    useEffect(() => {
-        fetchData();
-    }, [fetchData]);
+//! ------ Original code --------
+// import React from "react";
+// import { useGetHeroDataQuery } from "../../lib/Redux/ReduxToolkit/heroSlice";
 
-    const content = hero_section.data.map((d, i) => (
-        <section key={i}>
-            <Link to="">
-                <div>
-                    <HeroBanner img_lg={d.img_lg} img_sm={d.img_sm} />
-                    <div className="mt-3 tablet:text-center">
-                        <h1 className="tablet:text-6xl text-3xl tablet:mt-12">
-                            {d.title}
-                        </h1>
-                        <div className="mt-7">
-                            <DescriptiveText>{d.des_text}</DescriptiveText>
-                        </div>
-                    </div>
-                </div>
-            </Link>
-            <div className="w-full flex mt-8 tablet:justify-center">
-                <Button path={"/"}>Shop </Button>
-            </div>
-        </section>
-    ));
+// const Hero = () => {
+//     const {
+//         data: heroData,
+//         isLoading,
+//         isError,
+//         isSuccess,
+//         error,
+//     } = useGetHeroDataQuery();
 
-    return (
-        <>
-            {hero_section.hasError ? <p>failed to fetch data</p> : null}
-            {content}
-        </>
-    );
-};
+//     let content;
 
-export default connect(mapStateToProps, mapDispatchToProps)(Hero);
+//     if (isLoading) {
+//         content = <p>Loading...</p>;
+//     } else if (isSuccess) {
+//         content = JSON.stringify(heroData);
+//     } else if (isError) {
+//         content = <p>{error}</p>;
+//     }
 
-//! Without Redux Toolkit
-// import React, { useEffect } from "react";
-// import { Link } from "react-router-dom";
-// import { Button } from "../UI/Buttons/Button";
-// import { DescriptiveText } from "../UI/Texts/Text";
-// import HeroBanner from "./HeroBanner";
-// import { connect } from "react-redux";
-// import { fetchHeroData } from "../../redux/Actions";
-
-// const mapStateToProps = (state) => {
-//     return {
-//         hero_section: state.hero_section,
-//     };
+//     return <>{content}</>;
 // };
 
-// const mapDispatchToProps = (dispatch) => {
-//     return {
-//         fetchHeroData: () => dispatch(fetchHeroData()),
-//     };
-// };
-
-// const Hero = ({ fetchHeroData, hero_section }) => {
-//     useEffect(() => {
-//         fetchHeroData();
-//     }, [fetchHeroData]);
-
-//     const content = hero_section.data.map((d, i) => (
-//         <section key={i}>
-//             <Link to="">
-//                 <div>
-//                     <HeroBanner img_lg={d.img_lg} img_sm={d.img_sm} />
-//                     <div className="mt-3 tablet:text-center">
-//                         <h1 className="tablet:text-6xl text-3xl tablet:mt-12">
-//                             {d.title}
-//                         </h1>
-//                         <div className="mt-7">
-//                             <DescriptiveText>{d.des_text}</DescriptiveText>
-//                         </div>
-//                     </div>
-//                 </div>
-//             </Link>
-//             <div className="w-full flex mt-8 tablet:justify-center">
-//                 <Button path={"/"}>Shop </Button>
-//             </div>
-//         </section>
-//     ));
-
-//     return content;
-// };
-
-// export default connect(mapStateToProps, mapDispatchToProps)(Hero);
+// export default Hero;
