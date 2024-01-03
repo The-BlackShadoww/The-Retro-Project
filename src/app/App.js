@@ -2,10 +2,14 @@ import { BrowserRouter } from "react-router-dom";
 import Routers from "../routes/Routers";
 import { Provider } from "react-redux";
 import store from "../lib/Redux/Store";
-import { extendedApiSlice } from "../lib/Redux/ReduxToolkit/heroSlice";
+import { extendedHeroApiSlice } from "../services/ReduxRtkQuery/homeSlices/heroSlice";
+import { trendApiSlice } from "../services/ReduxRtkQuery/homeSlices/trendSlice";
+import { iconicApiSlice } from "../services/ReduxRtkQuery/homeSlices/iconicSlice";
 
-//* you will get this data immediately at app load time 
-// store.dispatch(extendedApiSlice.endpoints.getHeroData.initiate());
+//* you will get this data immediately at app load time
+store.dispatch(extendedHeroApiSlice.endpoints.getHeroData.initiate());
+store.dispatch(trendApiSlice.endpoints.getHeroData.initiate());
+store.dispatch(iconicApiSlice.endpoints.getHeroData.initiate());
 
 function App() {
     return (

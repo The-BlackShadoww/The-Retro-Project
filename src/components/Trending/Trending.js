@@ -1,55 +1,43 @@
 import React from "react";
 import { CardSwiper } from "../../lib/Swiper/Swiper";
+import {
+    useGetTrendDataQuery,
+    selectAllTrend,
+} from "../../services/ReduxRtkQuery/homeSlices/trendSlice";
+import { useSelector } from "react-redux";
 
 const Trending = () => {
-    const arr = [
-        {
-            id: 1,
-            img: "/Retro/trending-1",
-            desTxt: "Some random texts in details",
-            smTxt: "some small txt",
-            path: "/",
-        },
-        {
-            id: 2,
-            img: "/Retro/trending-1",
-            desTxt: "Some random texts in details",
-            smTxt: "some small txt",
-            path: "/",
-        },
-        {
-            id: 3,
-            img: "/Retro/trending-1",
-            desTxt: "Some random texts in details",
-            smTxt: "some small txt",
-            path: "/",
-        },
-        {
-            id: 3,
-            img: "/Retro/trending-1",
-            desTxt: "Some random texts in details",
-            smTxt: "some small txt",
-            path: "/",
-        },
-        {
-            id: 3,
-            img: "/Retro/trending-1",
-            desTxt: "Some random texts in details",
-            smTxt: "some small txt",
-            path: "/",
-        },
-    ];
+    const {
+        data: trendData,
+        isLoading,
+        isError,
+        isSuccess,
+        error,
+    } = useGetTrendDataQuery();
+    console.log(trendData);
 
-    return (
-        <div className="mt-24">
-            <div className="mb-7">
-                <h1>Trending</h1>
+    const data = useSelector(selectAllTrend);
+
+    let content;
+
+    if (isLoading) {
+        content = <p>Loading...</p>;
+    } else if (isSuccess) {
+        content = (
+            <div className="mt-24">
+                <div className="mb-7">
+                    <h1>Trending</h1>
+                </div>
+                <div className="">
+                    <CardSwiper arr={data} />
+                </div>
             </div>
-            <div className="">
-                <CardSwiper arr={arr} />
-            </div>
-        </div>
-    );
+        );
+    } else if (isError) {
+        content = <p>{error}</p>;
+    }
+
+    return content;
 };
 
 export default Trending;

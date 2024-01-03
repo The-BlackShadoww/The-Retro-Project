@@ -6,6 +6,9 @@ import "../../assests/styles/global.css";
 import { WindowWidth } from "../../utils/windowWidth/WindowWidth";
 
 const Offer = () => {
+    const src_lg = "/Retro/offer-2_t0xeb8";
+    const src_sm = "/Retro/offer-3_fkduya";
+
     return (
         <section className="mt-24">
             <div className="mb-7">
@@ -31,8 +34,8 @@ const Offer = () => {
                         {/* image */}
                         <WindowWidth
                             screen={767}
-                            src_lg={"/Retro/offer-2_t0xeb8"}
-                            srt_sm={"/Retro/offer-3_fkduya"}
+                            src_lg={src_lg}
+                            srt_sm={src_sm}
                         />
                     </div>
 

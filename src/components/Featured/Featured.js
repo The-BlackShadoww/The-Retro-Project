@@ -4,6 +4,9 @@ import { Link } from "react-router-dom";
 import { Poster } from "../UI/Media/AdvancedImg";
 
 const Featured = () => {
+    const img_1 = "/Retro/featuredImg-2_qj26dr";
+    const img_2 = "/Retro/offer_j0bqqs";
+
     return (
         <section className="mt-24">
             <div className="mb-7">
@@ -13,7 +16,7 @@ const Featured = () => {
             <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
                 <Link to="/featured">
                     <div className="w-full overflow-hidden relative">
-                        <Poster img={"/Retro/featuredImg-2_qj26dr"} />
+                        <Poster img={img_1} />
                         <div className="w-full h-full absolute top-0 left-0 bg-black opacity-40"></div>
                         <div className="absolute left-6 bottom-6 md:left-12 md:bottom-12 text-white">
                             <h1 className="mb-6">Latest from LeBron</h1>
@@ -24,7 +27,7 @@ const Featured = () => {
                 {/* ---- 2 ---- */}
                 <Link to="/featured">
                     <div className="w-full overflow-hidden relative">
-                        <Poster img={"/Retro/offer_j0bqqs"} />
+                        <Poster img={img_2} />
                         <div className="w-full h-full absolute top-0 left-0 bg-black/40"></div>
                         <div className="absolute left-6 bottom-6 md:left-12 md:bottom-12 text-white">
                             <h1 className="mb-6">Stay warm looking cool</h1>

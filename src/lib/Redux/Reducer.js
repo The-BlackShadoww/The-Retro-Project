@@ -1,5 +1,5 @@
 import { configureStore } from "@reduxjs/toolkit";
-import { apiSlice } from "./ReduxToolkit/apiSlice";
+import { apiSlice } from "../../services/ReduxRtkQuery/apiSlice";
 
 const RootReducer = configureStore({
     reducer: {
@@ -10,4 +10,3 @@ const RootReducer = configureStore({
 });
 
 export default RootReducer;
-

@@ -5,6 +5,9 @@ import { Button } from "../UI/Buttons/Button";
 import { WindowWidth } from "../../utils/windowWidth/WindowWidth";
 
 const Gift = () => {
+    const src_lg = "/Retro/giftBanner-lg";
+    const src_sm = "/Retro/giftBanner-sm";
+    
     return (
         <section className="mt-24">
             <div className="mb-7">
@@ -12,11 +15,7 @@ const Gift = () => {
             </div>
             <Link to="/" gifts>
                 <div className="mb-3">
-                    <WindowWidth
-                        screen={767}
-                        src_lg={"/Retro/giftBanner-lg"}
-                        srt_sm={"/Retro/giftBanner-sm"}
-                    />
+                    <WindowWidth screen={767} src_lg={src_lg} srt_sm={src_sm} />
                 </div>
                 <div className="text-left lg:text-center">
                     <h1 className="text-4xl">Top Gifts By Price</h1>

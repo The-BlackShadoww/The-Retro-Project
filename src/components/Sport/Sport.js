@@ -1,61 +1,42 @@
 import React from "react";
 import { CardSwiper } from "../../lib/Swiper/Swiper";
+import { useSelector } from "react-redux";
+import {
+    useGetSportDataQuery,
+    selectAllSport,
+} from "../../services/ReduxRtkQuery/homeSlices/sportSlice";
 
 const Sport = () => {
-    const arr = [
-        {
-            id: 1,
-            img: "/basketball",
-            desTxt: "Basketball",
-            path: "/signup",
-            button: "Sign Up",
-        },
-        {
-            id: 2,
-            img: "/tennis",
-            desTxt: "Tennis",
-            path: "/shop",
-            button: "Shop",
-        },
-        {
-            id: 2,
-            img: "/golf",
-            desTxt: "Golf",
-            path: "/shop",
-            button: "Shop",
-        },
-        {
-            id: 2,
-            img: "/training",
-            desTxt: "Training",
-            path: "/shop",
-            button: "Shop",
-        },
-        {
-            id: 2,
-            img: "/training",
-            desTxt: "Training",
-            path: "/shop",
-            button: "Shop",
-        },
-        {
-            id: 2,
-            img: "/training",
-            desTxt: "Training",
-            path: "/shop",
-            button: "Shop",
-        },
-    ];
-    return (
-        <section className="mt-14">
-            <div className="mb-7">
-                <h1>Shop by Sport</h1>
-            </div>
-            <div>
-                <CardSwiper arr={arr} />
-            </div>
-        </section>
-    );
+    const {
+        data: Data,
+        isLoading,
+        isError,
+        isSuccess,
+        error,
+    } = useGetSportDataQuery();
+    console.log(Data);
+
+    const data = useSelector(selectAllSport);
+
+    let content;
+
+    if (isLoading) {
+        content = <p>Loading...</p>;
+    } else if (isSuccess) {
+        content = (
+            <section className="mt-14">
+                <div className="mb-7">
+                    <h1>Shop by Sport</h1>
+                </div>
+                <div>
+                    <CardSwiper arr={data} />
+                </div>
+            </section>
+        );
+    } else if (isError) {
+        content = <p>{error}</p>;
+    }
+    return content;
 };
 
 export default Sport;

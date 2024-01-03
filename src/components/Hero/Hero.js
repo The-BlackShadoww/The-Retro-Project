@@ -1,9 +1,10 @@
 import React from "react";
 import { useSelector } from "react-redux";
+import HeroContent from "./HeroContent";
 import {
     useGetHeroDataQuery,
     selectAllHero,
-} from "../../lib/Redux/ReduxToolkit/heroSlice";
+} from "../../services/ReduxRtkQuery/homeSlices/heroSlice";
 
 const Hero = () => {
     const {
@@ -13,18 +14,15 @@ const Hero = () => {
         isSuccess,
         error,
     } = useGetHeroDataQuery();
+    console.log(heroData);
 
-    const allHeroes = useSelector(selectAllHero);
-
-    // const data = allHeroes.map((d) => <p>{d.name}</p>);
+    const data = useSelector(selectAllHero);
 
     let content;
     if (isLoading) {
         content = <p>Loading...</p>;
     } else if (isSuccess) {
-        // content = JSON.stringify(heroData);
-        content = JSON.stringify(allHeroes);
-        // content = data;
+        content = <HeroContent data={data} />;
     } else if (isError) {
         content = <p>{error}</p>;
     }
@@ -33,31 +31,3 @@ const Hero = () => {
 };
 
 export default Hero;
-
-//! ------ Original code --------
-// import React from "react";
-// import { useGetHeroDataQuery } from "../../lib/Redux/ReduxToolkit/heroSlice";
-
-// const Hero = () => {
-//     const {
-//         data: heroData,
-//         isLoading,
-//         isError,
-//         isSuccess,
-//         error,
-//     } = useGetHeroDataQuery();
-
-//     let content;
-
-//     if (isLoading) {
-//         content = <p>Loading...</p>;
-//     } else if (isSuccess) {
-//         content = JSON.stringify(heroData);
-//     } else if (isError) {
-//         content = <p>{error}</p>;
-//     }
-
-//     return <>{content}</>;
-// };
-
-// export default Hero;

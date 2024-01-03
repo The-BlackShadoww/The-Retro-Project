@@ -21,7 +21,7 @@ export function CardSwiper({ arr }) {
     });
 
     const slides = arr.map((item) => (
-        <SwiperSlide className="w-full">
+        <SwiperSlide key={item.id} className="w-full">
             <SwiperSlides item={item} />
         </SwiperSlide>
     ));
@@ -54,7 +54,7 @@ export function CardSwiperLg({ arr }) {
     });
 
     const slides = arr.map((item) => (
-        <SwiperSlide className="w-full">
+        <SwiperSlide key={item.id} className="w-full">
             <SwiperSlidesLayard item={item} />
         </SwiperSlide>
     ));

@@ -1,1 +1,1 @@
-// export const JSON_API = process.env.JSON_SERVER;
+export const JSON_API = process.env.REACT_APP_JSON_SERVER;

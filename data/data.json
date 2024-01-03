@@ -7,16 +7,174 @@
             "des_text": "Enjoy the high quality experience",
             "img_lg": "/Retro/heroBanner_r74rys",
             "img_sm": "/Retro/heroBannerLong_fw837w"
+        }
+    ],
+    
+    "trending": [
+        {
+            "id": 0,
+            "img": "/Retro/trending-1",
+            "desTxt": "Some random texts in details",
+            "smTxt": "some small txt",
+            "path": "/trending"
         },
         {
             "id": 1,
-            "name": "hero section",
-            "title": "New arrivals to discover",
-            "des_text": "Enjoy the high quality experience",
-            "img_lg": "/Retro/heroBanner_r74rys",
-            "img_sm": "/Retro/heroBannerLong_fw837w"
+            "img": "/Retro/trending-1",
+            "desTxt": "Some random texts in details",
+            "smTxt": "some small txt",
+            "path": "/"
+        },
+        {
+            "id": 2,
+            "img": "/Retro/trending-1",
+            "desTxt": "Some random texts in details",
+            "smTxt": "some small txt",
+            "path": "/"
+        },
+        {
+            "id": 3,
+            "img": "/Retro/trending-1",
+            "desTxt": "Some random texts in details",
+            "smTxt": "some small txt",
+            "path": "/"
+        },
+        {
+            "id": 4,
+            "img": "/Retro/trending-1",
+            "desTxt": "Some random texts in details",
+            "smTxt": "some small txt",
+            "path": "/"
         }
     ],
+
+    "iconic": [
+        {
+            "id": 0,
+            "img": "/Retro/shoe-2",
+            "desTxt": "Air jordan 1",
+            "path": "/jordan"
+        },
+        {
+            "id": 1,
+            "img": "/Retro/shoe-2",
+            "desTxt": "Air Max",
+            "path": "/air"
+        },
+        {
+            "id": 2,
+            "img": "/Retro/shoe-4",
+            "desTxt": "Jordan",
+            "path": "/"
+        },
+        {
+            "id": 3,
+            "img": "/Retro/shoe-7",
+            "desTxt": "Air jordan 1",
+            "path": "/"
+        },
+        {
+            "id": 4,
+            "img": "/Retro/shoe-4",
+            "desTxt": "Air jordan 1",
+            "path": "/"
+        },
+        {
+            "id": 5,
+            "img": "/Retro/shoe-6",
+            "desTxt": "Air jordan 1",
+            "path": "/"
+        }
+    ],
+
+    "sport": [
+        {
+            "id": 0,
+            "img": "/basketball",
+            "desTxt": "Basketball",
+            "path": "/signup",
+            "button": "Sign Up"
+        },
+        {
+            "id": 1,
+            "img": "/tennis",
+            "desTxt": "Tennis",
+            "path": "/shop",
+            "button": "Shop"
+        },
+        {
+            "id": 2,
+            "img": "/golf",
+            "desTxt": "Golf",
+            "path": "/shop",
+            "button": "Shop"
+        },
+        {
+            "id": 3,
+            "img": "/training",
+            "desTxt": "Training",
+            "path": "/shop",
+            "button": "Shop"
+        },
+        {
+            "id": 4,
+            "img": "/training",
+            "desTxt": "Training",
+            "path": "/shop",
+            "button": "Shop"
+        },
+        {
+            "id": 5,
+            "img": "/training",
+            "desTxt": "Training",
+            "path": "/shop",
+            "button": "Shop"
+        }
+    ],
+
+    "community": [
+        {
+            "id": 0,
+            "img": "/banner",
+            "smTxt": "Best of Retro",
+            "bigTxt": "It's better as a member",
+            "path": "/signup",
+            "button": "Sign Up"
+        },
+        {
+            "id": 1,
+            "img": "/women",
+            "smTxt": "Member Product",
+            "bigTxt": "Your Exclusive Access",
+            "path": "/shop",
+            "button": "Shop"
+        },
+        {
+            "id": 2,
+            "img": "/community-3",
+            "smTxt": "Member Product",
+            "bigTxt": "Your Exclusive Access",
+            "path": "/shop",
+            "button": "Shop"
+        },
+        {
+            "id": 3,
+            "img": "/community-2",
+            "smTxt": "Best of Retro",
+            "bigTxt": "It's better as a member",
+            "path": "/signup",
+            "button": "Sign Up"
+        },
+        {
+            "id": 4,
+            "img": "/Retro/community-4_hhlp80",
+            "smTxt": "Best of Retro",
+            "bigTxt": "It's better as a member",
+            "path": "/signup",
+            "button": "Sign Up"
+        }
+    ],
+
     "products": [
         {
             "id": 0,
