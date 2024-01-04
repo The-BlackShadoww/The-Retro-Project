@@ -37,6 +37,7 @@
 //! --------- 2 ----------
 
 import React, { useState, useEffect } from "react";
+import { RxPlus, RxMinus } from "react-icons/rx";
 
 export const Dropdown = ({ title, children }) => {
     const [openDropdown, setOpenDropdown] = useState(false);
@@ -74,7 +75,7 @@ export const Dropdown = ({ title, children }) => {
             >
                 <h6 className="text-sm md:text-[10px] md:mb-2">{title}</h6>
                 <span className="md:hidden">
-                    {openDropdown ? "MinusIcon" : "PlusIcon"}
+                    {openDropdown ? <RxMinus /> : <RxPlus />}
                 </span>
             </div>
             <div style={isMobile ? mobileDropdownStyle : null}>{children}</div>

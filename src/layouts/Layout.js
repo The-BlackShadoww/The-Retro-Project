@@ -16,7 +16,8 @@ const Layout = () => {
                     <Outlet />
                 </div>
             </div>
-            <div className="mt-5 p-4 md:p-12 bg-[#111111] text-white">
+            {/* This padding is very important */}
+            <div className="p-4 md:p-12 bg-[#111111] text-white">
                 <Footer />
             </div>
         </div>

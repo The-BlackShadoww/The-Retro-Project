@@ -31,13 +31,13 @@ export const SwiperButtonSm = ({ item }) => {
     return (
         <div className="w-full tablet:block hidden">
             <button
-                className="bg-indigo-800 z-10 p-4 rounded-full mx-1 hover:bg-gray-300 absolute top-2/4 left-[5%] -translate-y-1/2"
+                className="bg-gray-200 z-10 p-3 rounded-full mx-1 hover:bg-gray-300 absolute top-2/4 left-[5%] -translate-y-1/2"
                 onClick={() => swiper.slidePrev()}
             >
                 <CaretLeftIcon />
             </button>
             <button
-                className="bg-indigo-200 z-10 p-4 rounded-full mx-1 hover:bg-gray-300 absolute top-2/4 right-[5%] -translate-y-1/2"
+                className="bg-gray-200 z-10 p-3 rounded-full mx-1 hover:bg-gray-300 absolute top-2/4 right-[5%] -translate-y-1/2"
                 onClick={() => swiper.slideNext()}
             >
                 <CaretRightIcon />

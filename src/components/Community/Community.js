@@ -6,6 +6,7 @@ import {
     selectAllCommunity,
 } from "../../services/ReduxRtkQuery/homeSlices/communitySlice";
 import { useSelector } from "react-redux";
+import Section from "../../layouts/Section";
 
 const Community = () => {
     const {
@@ -25,14 +26,11 @@ const Community = () => {
         content = <p>Loading...</p>;
     } else if (isSuccess) {
         content = (
-            <section className="mt-24">
-                <span className="mb-7 -z-10">
-                    <h1>Retro Membership</h1>
-                </span>
+            <Section title={"Retro Membership"}>
                 <div>
                     <CardSwiperLg arr={data} />
                 </div>
-            </section>
+            </Section>
         );
     } else if (isError) {
         content = <p>{error}</p>;

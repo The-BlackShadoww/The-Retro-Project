@@ -2,6 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 import { SmallText } from "../UI/Texts/Text";
 import { Dropdown } from "../UI/Dropdowns/Dropdown";
+import Section from "../../layouts/Section";
 
 const BottomNav = () => {
     const dropDowns = (
@@ -150,7 +151,7 @@ const BottomNav = () => {
         </div>
     );
 
-    return <section className="mt-24">{dropDowns}</section>;
+    return <Section title={""}>{dropDowns}</Section>;
 };
 
 export default BottomNav;

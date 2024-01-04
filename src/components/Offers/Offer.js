@@ -4,16 +4,14 @@ import { DescriptiveText } from "../UI/Texts/Text";
 import { Button } from "../UI/Buttons/Button";
 import "../../assests/styles/global.css";
 import { WindowWidth } from "../../utils/windowWidth/WindowWidth";
+import Section from "../../layouts/Section";
 
 const Offer = () => {
     const src_lg = "/Retro/offer-2_t0xeb8";
     const src_sm = "/Retro/offer-3_fkduya";
 
     return (
-        <section className="mt-24">
-            <div className="mb-7">
-                <h1>Happening Now</h1>
-            </div>
+        <Section title={"Happening Now"}>
             <Link to="">
                 <div>
                     <div className="relative overflow-hidden w-full">
@@ -51,7 +49,7 @@ const Offer = () => {
                     </div>
                 </div>
             </Link>
-        </section>
+        </Section>
     );
 };
 

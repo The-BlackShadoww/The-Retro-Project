@@ -9,7 +9,7 @@ import {
 } from "../../components/UI/cards/Card";
 
 //!--------- Swiper 1 ---------
-export function CardSwiper({ arr }) {
+export function CardSwiper({ arr, slidesNumber }) {
     const [windowWidth, setWindowWidth] = useState(window.innerWidth <= 960);
 
     useEffect(() => {
@@ -33,7 +33,7 @@ export function CardSwiper({ arr }) {
             spaceBetween={0}
             slidesPerView={`${windowWidth ? 1.3 : 3}`}
         >
-            <SwiperButtonSm />
+            {slidesNumber <= 3 ? null : <SwiperButtonSm />}
             {slides}
         </Swiper>
     );
@@ -42,7 +42,7 @@ export function CardSwiper({ arr }) {
 }
 
 //!--------- Swiper 2 ---------
-export function CardSwiperLg({ arr }) {
+export function CardSwiperLg({ arr, slidesNumber }) {
     const [windowWidth, setWindowWidth] = useState(window.innerWidth <= 960);
 
     useEffect(() => {

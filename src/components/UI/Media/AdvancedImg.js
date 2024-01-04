@@ -25,12 +25,24 @@ export const Poster = ({ img }) => {
 };
 
 //!--------- Banner Image ---------
+// export const Banner = ({ img }) => {
+//     return (
+//         <AdvancedImage
+//             cldImg={cld
+//                 .image(img)
+//                 .resize(Resize.crop().width(1980).height(1600).gravity("auto"))
+//                 .quality(100)
+//                 .format("auto")}
+//         />
+//     );
+// };
+
 export const Banner = ({ img }) => {
     return (
         <AdvancedImage
             cldImg={cld
                 .image(img)
-                .resize(Resize.crop().width(1980).height(1600).gravity("auto"))
+                .resize(Resize.crop().width(2500).height(1000).gravity("auto"))
                 .quality(100)
                 .format("auto")}
         />
@@ -38,7 +50,7 @@ export const Banner = ({ img }) => {
 };
 
 //!--------- Card Image ---------
-export const Card = ({ img }) => {
+export const CardImg = ({ img }) => {
     return (
         <AdvancedImage
             cldImg={cld
@@ -51,7 +63,7 @@ export const Card = ({ img }) => {
 };
 
 //!--------- CardLg Image ---------
-export const CardLg = ({ img }) => {
+export const CardImgLg = ({ img }) => {
     return (
         <AdvancedImage
             cldImg={cld

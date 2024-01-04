@@ -5,6 +5,7 @@ import {
     useGetSportDataQuery,
     selectAllSport,
 } from "../../services/ReduxRtkQuery/homeSlices/sportSlice";
+import Section from "../../layouts/Section";
 
 const Sport = () => {
     const {
@@ -24,14 +25,11 @@ const Sport = () => {
         content = <p>Loading...</p>;
     } else if (isSuccess) {
         content = (
-            <section className="mt-14">
-                <div className="mb-7">
-                    <h1>Shop by Sport</h1>
-                </div>
+            <Section title={"Shop by Sport"}>
                 <div>
                     <CardSwiper arr={data} />
                 </div>
-            </section>
+            </Section>
         );
     } else if (isError) {
         content = <p>{error}</p>;

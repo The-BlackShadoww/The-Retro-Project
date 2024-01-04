@@ -2,7 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 import { DescriptiveText, SmallText } from "../Texts/Text";
 import { ButtonWhite } from "../Buttons/Button";
-import { Card, CardLg } from "../Media/AdvancedImg";
+import { CardImg, CardImgLg } from "../Media/AdvancedImg";
 
 //!--------- Card 1 ---------
 export const SwiperSlides = ({ item }) => {
@@ -10,7 +10,7 @@ export const SwiperSlides = ({ item }) => {
         <Link to={item.path}>
             <div className="w-[97%]">
                 <div>
-                    <Card img={item.img} />
+                    <CardImg img={item.img} />
                 </div>
                 <div>
                     <span>
@@ -18,6 +18,9 @@ export const SwiperSlides = ({ item }) => {
                     </span>
                     <span>
                         <DescriptiveText>{item.desTxt}</DescriptiveText>
+                    </span>
+                    <span>
+                        <DescriptiveText>{item.category}</DescriptiveText>
                     </span>
                 </div>
             </div>
@@ -38,7 +41,7 @@ export const SwiperSlidesLayard = ({ item, windowWidth }) => {
                     <ButtonWhite path={item.path}>{item.button}</ButtonWhite>
                 </div>
                 <div className={``}>
-                    <CardLg img={item.img} />
+                    <CardImgLg img={item.img} />
                 </div>
             </div>
         </Link>

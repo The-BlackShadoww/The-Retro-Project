@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import HeroBanner from "./HeroBanner";
 import { DescriptiveText } from "../UI/Texts/Text";
 import { Button } from "../UI/Buttons/Button";
+import "../../assests/styles/global.css";
 
 const HeroContent = ({ data }) => {
     const content = data.map((item) => (
@@ -11,7 +12,7 @@ const HeroContent = ({ data }) => {
                 <div>
                     <HeroBanner img_lg={item.img_lg} img_sm={item.img_sm} />
                     <div className="mt-3 tablet:text-center">
-                        <h1 className="tablet:text-6xl text-3xl tablet:mt-12">
+                        <h1 className="tablet:text-6xl text-3xl tablet:mt-12 akira">
                             {item.title}
                         </h1>
                         <div className="mt-7">
@@ -21,7 +22,7 @@ const HeroContent = ({ data }) => {
                 </div>
             </Link>
             <div className="w-full flex mt-8 tablet:justify-center">
-                <Button path={"/"}>Shop </Button>
+                <Button path={"/"}>Shop</Button>
             </div>
         </section>
     ));

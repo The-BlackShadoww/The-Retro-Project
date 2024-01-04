@@ -3,16 +3,14 @@ import { Link } from "react-router-dom";
 import { DescriptiveText } from "../UI/Texts/Text";
 import { Button } from "../UI/Buttons/Button";
 import { WindowWidth } from "../../utils/windowWidth/WindowWidth";
+import Section from "../../layouts/Section";
 
 const Gift = () => {
     const src_lg = "/Retro/giftBanner-lg";
     const src_sm = "/Retro/giftBanner-sm";
-    
+
     return (
-        <section className="mt-24">
-            <div className="mb-7">
-                <h1>All The Greatest Gifts</h1>
-            </div>
+        <Section title={"All The Greatest Gifts"}>
             <Link to="/" gifts>
                 <div className="mb-3">
                     <WindowWidth screen={767} src_lg={src_lg} srt_sm={src_sm} />
@@ -35,7 +33,7 @@ const Gift = () => {
                     </div>
                 </div>
             </Link>
-        </section>
+        </Section>
     );
 };
 

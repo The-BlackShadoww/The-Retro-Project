@@ -41,7 +41,7 @@ const MobileNav = () => {
                             <MagnifyingGlassIcon />
                         </span>
                         <Link
-                            to="https://learnwithsumit.com/"
+                            to="/"
                             className="cursor-pointer px-2"
                         >
                             <BagIcon />

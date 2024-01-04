@@ -8,6 +8,7 @@ import {
     StoreIcon,
     QuestionIcon,
 } from "../../assests/icons/Icons";
+import { Link } from "react-router-dom";
 
 const SideNav = ({ handler, siderHandler }) => {
     const show = (
@@ -24,30 +25,30 @@ const SideNav = ({ handler, siderHandler }) => {
             </div>
             <div className="mt-4">
                 <div className="flex flex-col">
-                    <a
-                        href="https://learnwithsumit.com/"
+                    <Link
+                        to={"men"}
                         className="flex justify-between items-center"
                     >
                         Men <CaretRightIcon />
-                    </a>
-                    <a
-                        href="https://learnwithsumit.com/"
+                    </Link>
+                    <Link
+                        to={"women"}
                         className="flex justify-between items-center mt-3"
                     >
                         Women <CaretRightIcon />
-                    </a>
-                    <a
-                        href="https://learnwithsumit.com/"
+                    </Link>
+                    <Link
+                        to={"kids"}
                         className="flex justify-between items-center mt-3"
                     >
                         Kids <CaretRightIcon />
-                    </a>
-                    <a
-                        href="https://learnwithsumit.com/"
+                    </Link>
+                    <Link
+                        to={"new"}
                         className="flex justify-between items-center mt-3"
                     >
                         New & Featured <CaretRightIcon />
-                    </a>
+                    </Link>
                 </div>
 
                 <div className="mt-16 text-slate-600">

@@ -2,16 +2,14 @@ import React from "react";
 import { ButtonWhite } from "../UI/Buttons/Button";
 import { Link } from "react-router-dom";
 import { Poster } from "../UI/Media/AdvancedImg";
+import Section from "../../layouts/Section";
 
 const Featured = () => {
     const img_1 = "/Retro/featuredImg-2_qj26dr";
     const img_2 = "/Retro/offer_j0bqqs";
 
     return (
-        <section className="mt-24">
-            <div className="mb-7">
-                <h1>Featured</h1>
-            </div>
+        <Section title={"Featured"}>
             {/* ------ 1 ----- */}
             <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
                 <Link to="/featured">
@@ -36,7 +34,7 @@ const Featured = () => {
                     </div>
                 </Link>
             </div>
-        </section>
+        </Section>
     );
 };
 

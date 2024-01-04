@@ -6,6 +6,14 @@ export const apiSlice = createApi({
     baseQuery: fetchBaseQuery({
         baseUrl: JSON_API,
     }),
-    tagTypes: ["hero", "products", "trending", "iconic", "sport", "community"], //* its updates the data when changed
+    tagTypes: [
+        "hero",
+        "products",
+        "trending",
+        "iconic",
+        "sport",
+        "community",
+        "allGenderProducts",
+    ], //* its updates the data when changed
     endpoints: (builder) => ({}),
 });

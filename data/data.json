@@ -3,13 +3,14 @@
         {
             "id": 0,
             "name": "hero section",
-            "title": "New arrivals to discover",
-            "des_text": "Enjoy the high quality experience",
+            "title": "A Big Title Here",
+            "des_text": "Give a message",
             "img_lg": "/Retro/heroBanner_r74rys",
-            "img_sm": "/Retro/heroBannerLong_fw837w"
+            "img_sm": "/Retro/heroBannerLong_fw837w",
+            "path": "/"
         }
     ],
-    
+
     "trending": [
         {
             "id": 0,
@@ -172,6 +173,162 @@
             "bigTxt": "It's better as a member",
             "path": "/signup",
             "button": "Sign Up"
+        }
+    ],
+
+    "allGenderProducts": [
+        {
+            "id": 0,
+            "gender": "men",
+            "title": "Big Title here",
+            "des_text": "Give a message",
+            "path": "/",
+            "img_lg": "/Retro/men_banner_lg_oux8yv",
+            "img_sm": "/Retro/men_banner_sm_xdcuot",
+            "essentials": [
+                {
+                    "id": 0,
+                    "img": "/Retro/men-clothing-essentials_zhxmqe",
+                    "category": "Clothing",
+                    "path": "/cloth"
+                },
+                {
+                    "id": 1,
+                    "img": "/Retro/men-shoe-essntials_prdtqc",
+                    "category": "Shoes",
+                    "path": "/shoe"
+                },
+                {
+                    "id": 2,
+                    "img": "/Retro/men-accessories-essntials_u2rsq2",
+                    "category": "Accessories",
+                    "path": "/accessories"
+                }
+            ],
+            "justIn": [
+                {
+                    "id": 0,
+                    "img": "/Retro/men-air-max_akkt61",
+                    "p_name": "Air Max 90",
+                    "status": "",
+                    "path": "/"
+                },
+                {
+                    "id": 1,
+                    "img": "/Retro/men-air-force_qz1bqa",
+                    "p_name": "The Latest Air Force 1s",
+                    "status": "Trending Now",
+                    "path": "/"
+                }
+            ],
+            "nike_membership": {
+                "heading": "Let's Get Professional",
+                "message": "Add your interest so you can see more of what you love",
+                "img_lg": "/Retro/nike-membership-lg_cekkaz",
+                "img_sm": "/Retro/nike-membership-sm_phlsm7"
+            }
+        },
+        {
+            "id": 1,
+            "gender": "women",
+            "title": "Big Title here",
+            "des_text": "Give a message",
+            "path": "/",
+            "img_lg": "/Retro/women-banner-lg_ozes4i",
+            "img_sm": "/Retro/women-banner-sm_jwjvqb",
+            "essentials": [
+                {
+                    "id": 0,
+                    "img": "/Retro/women-essentials-clothing_dxqt1o",
+                    "category": "Clothing",
+                    "path": "/cloth"
+                },
+                {
+                    "id": 1,
+                    "img": "/Retro/women-essentials-shoes_egd743",
+                    "category": "Shoes",
+                    "path": "/shoe"
+                },
+                {
+                    "id": 2,
+                    "img": "/Retro/women-essentials-accessories_dzryss",
+                    "category": "Accessories",
+                    "path": "/accessories"
+                }
+            ],
+            "justIn": [
+                {
+                    "id": 0,
+                    "img": "/Retro/women-just-in-1_jhooqt",
+                    "p_name": "Air Max Futura",
+                    "status": "",
+                    "path": "/"
+                },
+                {
+                    "id": 1,
+                    "img": "/Retro/women-just-in-2_tpwm1h",
+                    "p_name": "Leggings",
+                    "status": "Trending Now",
+                    "path": "/"
+                }
+            ],
+            "nike_membership": {
+                "heading": "Let's Get Professional",
+                "message": "Add your interest so you can see more of what you love",
+                "img_lg": "/Retro/nike-membership-lg_cekkaz",
+                "img_sm": "/Retro/nike-membership-sm_phlsm7"
+            }
+        },
+        {
+            "id": 2,
+            "gender": "kids",
+            "title": "Big Title here",
+            "des_text": "Give a message",
+            "path": "/",
+            "img_lg": "/Retro/kids-banner-lg_gzdizh",
+            "img_sm": "/Retro/kids-banner-sm_hjewlx",
+            "essentials": [
+                {
+                    "id": 0,
+                    "img": "/Retro/kids-essentials-clothing_hqu7ae",
+                    "category": "Clothing",
+                    "path": "/cloth"
+                },
+                {
+                    "id": 1,
+                    "img": "/Retro/kids-essentials-shoes_ywzcei",
+                    "category": "Shoes",
+                    "path": "/shoe"
+                },
+                {
+                    "id": 2,
+                    "img": "/Retro/kids-essentials-accessories_nlvtoy",
+                    "category": "Accessories",
+                    "path": "/accessories"
+                }
+            ],
+            "justIn": [
+                {
+                    "id": 0,
+                    "img": "/Retro/kids-justin-2_buisbd",
+                    "p_name": "Nurture steps",
+                    "status": "",
+                    "path": "/"
+                },
+                {
+                    "id": 1,
+                    "img": "/Retro/kids-justin-1_jbzse3",
+                    "p_name": "Our comfiest",
+                    "status": "Trending Now",
+                    "path": "/"
+                }
+            ],
+            "nike_membership": {
+                "heading": "Let's Get Professional",
+                "message": "Add your interest so you can see more of what you love",
+                "img_lg": "/Retro/nike-membership-lg_cekkaz",
+                "img_sm": "/Retro/nike-membership-sm_phlsm7"
+            }
         }
     ],
 

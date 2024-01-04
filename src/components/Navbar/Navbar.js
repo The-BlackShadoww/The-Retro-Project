@@ -12,7 +12,10 @@ const Navbar = () => {
         <header className="w-full h-[60px] relative z-[2] Poppins">
             <div className="max-w-[1920px] max-h-[60px] mx-auto tablet:pr-[38px] tablet:pl-[36px] pr-3 pl-4 opacity-100 flex items-center">
                 <div className="z-[100] visible pl-3">
-                    <Link className="my-[1px] h-[59px] w-[59px] block">
+                    <Link
+                        to="/"
+                        className="my-[1px] h-[59px] w-[59px] block"
+                    >
                         <Logo />
                     </Link>
                 </div>
@@ -24,9 +27,13 @@ const Navbar = () => {
                     <Search />
                 </div>
                 {/* tablet:block hidden */}
-                <div className="tablet:flex hidden">
-                    <HeartIcon />
-                    <BagIcon />
+                <div className="tablet:flex hidden z-[2]">
+                    <Link to={""} className="mx-4"> 
+                        <HeartIcon />
+                    </Link>
+                    <Link to={"/bag"}>
+                        <BagIcon />
+                    </Link>
                 </div>
             </div>
         </header>

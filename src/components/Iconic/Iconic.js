@@ -5,33 +5,30 @@ import {
     selectAllIconic,
 } from "../../services/ReduxRtkQuery/homeSlices/iconicSlice";
 import { useSelector } from "react-redux";
+import Section from "../../layouts/Section";
 
 const Iconic = () => {
     const {
-        data: Data,
+        // data: Data,
         isLoading,
         isError,
         isSuccess,
         error,
     } = useGetIconicDataQuery();
-    console.log(Data);
 
     const data = useSelector(selectAllIconic);
 
     let content;
-    
+
     if (isLoading) {
         content = <p>Loading...</p>;
     } else if (isSuccess) {
         content = (
-            <section className="mt-24">
-                <div className="mb-7">
-                    <h1>Always Iconic</h1>
-                </div>
+            <Section title={"Always Iconic"}>
                 <div className="">
                     <CardSwiper arr={data} />
                 </div>
-            </section>
+            </Section>
         );
     } else if (isError) {
         content = <p>{error}</p>;
