@@ -332,6 +332,312 @@
         }
     ],
 
+    "newFeaturedProducts": [
+        {
+            "id": 0,
+            "name": "Product Name",
+            "price": 0,
+            "category": "shoes",
+            "categoryId": "#shoes%",
+            "gender": "men",
+            "img": {
+                "main_img": "/Retro/new_img_main_guigju",
+                "img_2": "/Retro/new_img_4_viquzm",
+                "img_3": "/Retro/new_img_3_s4mgzb",
+                "img_4": "/Retro/new_img_2_ihhj8j",
+                "img_5": "/Retro/new_img_5_dnluvy"
+            },
+            "colors": {
+                "black": {
+                    "main_img": "/Retro/new_img_main_guigju",
+                    "img_2": "/Retro/new_img_4_viquzm",
+                    "img_3": "/Retro/new_img_3_s4mgzb",
+                    "img_4": "/Retro/new_img_2_ihhj8j",
+                    "img_5": "/Retro/new_img_5_dnluvy"
+                },
+                "brown": {
+                    "main_img": "/Retro/men_new_s_main_f2fq1c",
+                    "img_2": "/Retro/men_new_s_5_himjw6",
+                    "img_3": "/Retro/men_new_s_4_hwrzm1",
+                    "img_4": "/Retro/men_new_s_3_ywvgxk",
+                    "img_5": "/Retro/men_new_s_2_stnfiu"
+                }
+            },
+            "kids": "non",
+            "arrival": "new",
+            "details": "Some details about the product",
+            "for_age": "old",
+            "path": "/men"
+        },
+        {
+            "id": 1,
+            "name": "Product Name",
+            "price": 0,
+            "category": "clothing",
+            "categoryId": "#clothing%",
+            "gender": "women",
+            "img": {
+                "main_img": "/Retro/women_c_new_main_jnezpp",
+                "img_2": "/Retro/women_c_new_3_crqeoo",
+                "img_3": "/Retro/women_c_new_2_jhjhpx",
+                "img_4": "/Retro/women_c_new_5_fcqwph",
+                "img_5": "/Retro/women_c_new_4_jm352m"
+            },
+            "colors": {
+                "black": {
+                    "main_img": "/Retro/women_c_new_main_jnezpp",
+                    "img_2": "/Retro/women_c_new_3_crqeoo",
+                    "img_3": "/Retro/women_c_new_2_jhjhpx",
+                    "img_4": "/Retro/women_c_new_5_fcqwph",
+                    "img_5": "/Retro/women_c_new_4_jm352m"
+                },
+                "brown": {
+                    "main_img": "/Retro/men_new_s_main_f2fq1c",
+                    "img_2": "/Retro/men_new_s_5_himjw6",
+                    "img_3": "/Retro/men_new_s_4_hwrzm1",
+                    "img_4": "/Retro/men_new_s_3_ywvgxk",
+                    "img_5": "/Retro/men_new_s_2_stnfiu"
+                }
+            },
+            "kids": "non",
+            "arrival": "new",
+            "details": "Some details about the product",
+            "for_age": "adult",
+            "path": ""
+        },
+        {
+            "id": 2,
+            "name": "Product Name",
+            "price": 0,
+            "category": "accessories",
+            "categoryId": "#accessories%",
+            "gender": "",
+            "img": {
+                "main_img": "/Retro/new_k_b_acc_main_btmuuq",
+                "img_2": "/Retro/new_k_b_acc_5_o6ragn",
+                "img_3": "/Retro/new_k_b_acc_4_p7rxxn",
+                "img_4": "/Retro/new_k_b_acc_3_trmipe",
+                "img_5": "/Retro/new_k_b_acc_2_rgxusb"
+            },
+            "colors": {
+                "black": {
+                    "main_img": "/Retro/new_k_b_acc_main_btmuuq",
+                    "img_2": "/Retro/new_k_b_acc_5_o6ragn",
+                    "img_3": "/Retro/new_k_b_acc_4_p7rxxn",
+                    "img_4": "/Retro/new_k_b_acc_3_trmipe",
+                    "img_5": "/Retro/new_k_b_acc_2_rgxusb"
+                }
+            },
+            "kids": "boy",
+            "arrival": "new",
+            "details": "Some details about the product",
+            "for_age": "kid",
+            "path": ""
+        },
+        {
+            "id": 3,
+            "name": "Product Name",
+            "price": 0,
+            "category": "shoes",
+            "categoryId": "#shoes%",
+            "gender": "men",
+            "img": {
+                "main_img": "/Retro/new_img_main_guigju",
+                "img_2": "/Retro/new_img_4_viquzm",
+                "img_3": "/Retro/new_img_3_s4mgzb",
+                "img_4": "/Retro/new_img_2_ihhj8j",
+                "img_5": "/Retro/new_img_5_dnluvy"
+            },
+            "colors": {
+                "black": {
+                    "main_img": "/Retro/new_img_main_guigju",
+                    "img_2": "/Retro/new_img_4_viquzm",
+                    "img_3": "/Retro/new_img_3_s4mgzb",
+                    "img_4": "/Retro/new_img_2_ihhj8j",
+                    "img_5": "/Retro/new_img_5_dnluvy"
+                },
+                "brown": {
+                    "main_img": "/Retro/men_new_s_main_f2fq1c",
+                    "img_2": "/Retro/men_new_s_5_himjw6",
+                    "img_3": "/Retro/men_new_s_4_hwrzm1",
+                    "img_4": "/Retro/men_new_s_3_ywvgxk",
+                    "img_5": "/Retro/men_new_s_2_stnfiu"
+                }
+            },
+            "kids": "non",
+            "arrival": "new",
+            "details": "Some details about the product",
+            "for_age": "old",
+            "path": "/men"
+        },
+        {
+            "id": 4,
+            "name": "Product Name",
+            "price": 0,
+            "category": "clothing",
+            "categoryId": "#clothing%",
+            "gender": "women",
+            "img": {
+                "main_img": "/Retro/women_c_new_main_jnezpp",
+                "img_2": "/Retro/women_c_new_3_crqeoo",
+                "img_3": "/Retro/women_c_new_2_jhjhpx",
+                "img_4": "/Retro/women_c_new_5_fcqwph",
+                "img_5": "/Retro/women_c_new_4_jm352m"
+            },
+            "colors": {
+                "black": {
+                    "main_img": "/Retro/women_c_new_main_jnezpp",
+                    "img_2": "/Retro/women_c_new_3_crqeoo",
+                    "img_3": "/Retro/women_c_new_2_jhjhpx",
+                    "img_4": "/Retro/women_c_new_5_fcqwph",
+                    "img_5": "/Retro/women_c_new_4_jm352m"
+                },
+                "brown": {
+                    "main_img": "/Retro/men_new_s_main_f2fq1c",
+                    "img_2": "/Retro/men_new_s_5_himjw6",
+                    "img_3": "/Retro/men_new_s_4_hwrzm1",
+                    "img_4": "/Retro/men_new_s_3_ywvgxk",
+                    "img_5": "/Retro/men_new_s_2_stnfiu"
+                }
+            },
+            "kids": "non",
+            "arrival": "new",
+            "details": "Some details about the product",
+            "for_age": "adult",
+            "path": ""
+        },
+        {
+            "id": 5,
+            "name": "Product Name",
+            "price": 0,
+            "category": "accessories",
+            "categoryId": "#accessories%",
+            "gender": "",
+            "img": {
+                "main_img": "/Retro/new_k_b_acc_main_btmuuq",
+                "img_2": "/Retro/new_k_b_acc_5_o6ragn",
+                "img_3": "/Retro/new_k_b_acc_4_p7rxxn",
+                "img_4": "/Retro/new_k_b_acc_3_trmipe",
+                "img_5": "/Retro/new_k_b_acc_2_rgxusb"
+            },
+            "colors": {
+                "black": {
+                    "main_img": "/Retro/new_k_b_acc_main_btmuuq",
+                    "img_2": "/Retro/new_k_b_acc_5_o6ragn",
+                    "img_3": "/Retro/new_k_b_acc_4_p7rxxn",
+                    "img_4": "/Retro/new_k_b_acc_3_trmipe",
+                    "img_5": "/Retro/new_k_b_acc_2_rgxusb"
+                }
+            },
+            "kids": "boy",
+            "arrival": "new",
+            "details": "Some details about the product",
+            "for_age": "kid",
+            "path": ""
+        },
+        {
+            "id": 6,
+            "name": "Product Name",
+            "price": 0,
+            "category": "shoes",
+            "categoryId": "#shoes%",
+            "gender": "men",
+            "img": {
+                "main_img": "/Retro/new_img_main_guigju",
+                "img_2": "/Retro/new_img_4_viquzm",
+                "img_3": "/Retro/new_img_3_s4mgzb",
+                "img_4": "/Retro/new_img_2_ihhj8j",
+                "img_5": "/Retro/new_img_5_dnluvy"
+            },
+            "colors": {
+                "black": {
+                    "main_img": "/Retro/new_img_main_guigju",
+                    "img_2": "/Retro/new_img_4_viquzm",
+                    "img_3": "/Retro/new_img_3_s4mgzb",
+                    "img_4": "/Retro/new_img_2_ihhj8j",
+                    "img_5": "/Retro/new_img_5_dnluvy"
+                },
+                "brown": {
+                    "main_img": "/Retro/men_new_s_main_f2fq1c",
+                    "img_2": "/Retro/men_new_s_5_himjw6",
+                    "img_3": "/Retro/men_new_s_4_hwrzm1",
+                    "img_4": "/Retro/men_new_s_3_ywvgxk",
+                    "img_5": "/Retro/men_new_s_2_stnfiu"
+                }
+            },
+            "kids": "non",
+            "arrival": "new",
+            "details": "Some details about the product",
+            "for_age": "old",
+            "path": "/men"
+        },
+        {
+            "id": 7,
+            "name": "Product Name",
+            "price": 0,
+            "category": "clothing",
+            "categoryId": "#clothing%",
+            "gender": "women",
+            "img": {
+                "main_img": "/Retro/women_c_new_main_jnezpp",
+                "img_2": "/Retro/women_c_new_3_crqeoo",
+                "img_3": "/Retro/women_c_new_2_jhjhpx",
+                "img_4": "/Retro/women_c_new_5_fcqwph",
+                "img_5": "/Retro/women_c_new_4_jm352m"
+            },
+            "colors": {
+                "black": {
+                    "main_img": "/Retro/women_c_new_main_jnezpp",
+                    "img_2": "/Retro/women_c_new_3_crqeoo",
+                    "img_3": "/Retro/women_c_new_2_jhjhpx",
+                    "img_4": "/Retro/women_c_new_5_fcqwph",
+                    "img_5": "/Retro/women_c_new_4_jm352m"
+                },
+                "brown": {
+                    "main_img": "/Retro/men_new_s_main_f2fq1c",
+                    "img_2": "/Retro/men_new_s_5_himjw6",
+                    "img_3": "/Retro/men_new_s_4_hwrzm1",
+                    "img_4": "/Retro/men_new_s_3_ywvgxk",
+                    "img_5": "/Retro/men_new_s_2_stnfiu"
+                }
+            },
+            "kids": "non",
+            "arrival": "new",
+            "details": "Some details about the product",
+            "for_age": "adult",
+            "path": ""
+        },
+        {
+            "id": 8,
+            "name": "Product Name",
+            "price": 0,
+            "category": "accessories",
+            "categoryId": "#accessories%",
+            "gender": "",
+            "img": {
+                "main_img": "/Retro/new_k_b_acc_main_btmuuq",
+                "img_2": "/Retro/new_k_b_acc_5_o6ragn",
+                "img_3": "/Retro/new_k_b_acc_4_p7rxxn",
+                "img_4": "/Retro/new_k_b_acc_3_trmipe",
+                "img_5": "/Retro/new_k_b_acc_2_rgxusb"
+            },
+            "colors": {
+                "black": {
+                    "main_img": "/Retro/new_k_b_acc_main_btmuuq",
+                    "img_2": "/Retro/new_k_b_acc_5_o6ragn",
+                    "img_3": "/Retro/new_k_b_acc_4_p7rxxn",
+                    "img_4": "/Retro/new_k_b_acc_3_trmipe",
+                    "img_5": "/Retro/new_k_b_acc_2_rgxusb"
+                }
+            },
+            "kids": "boy",
+            "arrival": "new",
+            "details": "Some details about the product",
+            "for_age": "kid",
+            "path": ""
+        }
+    ],
+
     "products": [
         {
             "id": 0,

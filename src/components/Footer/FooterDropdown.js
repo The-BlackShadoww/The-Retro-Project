@@ -11,20 +11,26 @@ const FooterDropdown = () => {
                     <li>
                         <Link
                             to=""
-                            style={{ fontSize: 7 }}
-                            className="text-gray-400"
+                            className="text-[11px] opacity-[65%] hover:opacity-100"
                         >
-                            order Status
+                            Info
                         </Link>
                     </li>
                     <li>
-                        <a
-                            href="https://learnwithsumit.com/"
-                            style={{ fontSize: 7 }}
-                            className="text-gray-400"
+                        <Link
+                            to=""
+                            className="text-[11px] opacity-[65%] hover:opacity-100"
                         >
-                            Shipping and Delivery
-                        </a>
+                            Info
+                        </Link>
+                    </li>{" "}
+                    <li>
+                        <Link
+                            to=""
+                            className="text-[11px] opacity-[65%] hover:opacity-100"
+                        >
+                            Info
+                        </Link>
                     </li>
                 </ul>
             </Dropdown>
@@ -32,22 +38,28 @@ const FooterDropdown = () => {
             <Dropdown title={"About Retro"}>
                 <ul>
                     <li>
-                        <a
-                            href="https://learnwithsumit.com/"
-                            style={{ fontSize: 7 }}
-                            className="text-gray-400"
+                        <Link
+                            to=""
+                            className="text-[11px] opacity-[65%] hover:opacity-100"
                         >
-                            order Status
-                        </a>
+                            Info
+                        </Link>
                     </li>
                     <li>
-                        <a
-                            href="https://learnwithsumit.com/"
-                            style={{ fontSize: 7 }}
-                            className="text-gray-400"
+                        <Link
+                            to=""
+                            className="text-[11px] opacity-[65%] hover:opacity-100"
                         >
-                            Shipping and Delivery
-                        </a>
+                            Info
+                        </Link>
+                    </li>{" "}
+                    <li>
+                        <Link
+                            to=""
+                            className="text-[11px] opacity-[65%] hover:opacity-100"
+                        >
+                            Info
+                        </Link>
                     </li>
                 </ul>
             </Dropdown>
@@ -55,22 +67,28 @@ const FooterDropdown = () => {
             <Dropdown title={"Promotions & Discounts"}>
                 <ul>
                     <li>
-                        <a
-                            href="https://learnwithsumit.com/"
-                            style={{ fontSize: 7 }}
-                            className="text-gray-400"
+                        <Link
+                            to=""
+                            className="text-[11px] opacity-[65%] hover:opacity-100"
                         >
-                            order Status
-                        </a>
+                            Info
+                        </Link>
                     </li>
                     <li>
-                        <a
-                            href="https://learnwithsumit.com/"
-                            style={{ fontSize: 7 }}
-                            className="text-gray-400"
+                        <Link
+                            to=""
+                            className="text-[11px] opacity-[65%] hover:opacity-100"
                         >
-                            Shipping and Delivery
-                        </a>
+                            Info
+                        </Link>
+                    </li>{" "}
+                    <li>
+                        <Link
+                            to=""
+                            className="text-[11px] opacity-[65%] hover:opacity-100"
+                        >
+                            Info
+                        </Link>
                     </li>
                 </ul>
             </Dropdown>

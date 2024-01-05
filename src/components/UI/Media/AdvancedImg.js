@@ -75,3 +75,29 @@ export const CardImgLg = ({ img }) => {
         />
     );
 };
+
+//!--------- Product Image ---------
+// export const ProductImg = ({ img }) => {
+//     return (
+//         <AdvancedImage
+//             cldImg={cld
+//                 .image(img)
+//                 .resize(Resize.scale().width(1200).height(1280))
+//                 .resize(Resize.crop().width(1500).height(1550).gravity("auto"))
+//                 .quality("auto")
+//                 .format("auto")}
+//         />
+//     );
+// };
+export const ProductImg = ({ img }) => {
+    return (
+        <AdvancedImage
+            cldImg={cld
+                .image(img)
+                .resize(Resize.fill().width(1200).height(1280)) // Set maximum width and height
+                .resize(Resize.crop().width(1200).height(1280).gravity("auto"))
+                .quality("auto")
+                .format("auto")}
+        />
+    );
+};

@@ -25,22 +25,22 @@ export const Logo = () => {
 export const BagIcon = () => {
     return (
         // <Link to={path} className="mx-2 cursor-pointer">
-            <svg
-                aria-hidden="true"
-                class="pre-nav-design-icon"
-                focusable="false"
-                viewBox="0 0 24 24"
-                role="img"
-                width="24px"
-                height="24px"
-                fill="none"
-            >
-                <path
-                    stroke="currentColor"
-                    stroke-width="1.5"
-                    d="M8.25 8.25V6a2.25 2.25 0 012.25-2.25h3a2.25 2.25 0 110 4.5H3.75v8.25a3.75 3.75 0 003.75 3.75h9a3.75 3.75 0 003.75-3.75V8.25H17.5"
-                ></path>
-            </svg>
+        <svg
+            aria-hidden="true"
+            class="pre-nav-design-icon"
+            focusable="false"
+            viewBox="0 0 24 24"
+            role="img"
+            width="24px"
+            height="24px"
+            fill="none"
+        >
+            <path
+                stroke="currentColor"
+                stroke-width="1.5"
+                d="M8.25 8.25V6a2.25 2.25 0 012.25-2.25h3a2.25 2.25 0 110 4.5H3.75v8.25a3.75 3.75 0 003.75 3.75h9a3.75 3.75 0 003.75-3.75V8.25H17.5"
+            ></path>
+        </svg>
         // </Link>
     );
 };
@@ -152,22 +152,22 @@ export const FileIcon = () => {
 export const HeartIcon = ({ path }) => {
     return (
         // <Link to={path} className="mx-2 ">
-            <svg
-                aria-hidden="true"
-                class="pre-nav-design-icon"
-                focusable="false"
-                viewBox="0 0 24 24"
-                role="img"
-                width="24px"
-                height="24px"
-                fill="none"
-            >
-                <path
-                    stroke="currentColor"
-                    stroke-width="1.5"
-                    d="M16.794 3.75c1.324 0 2.568.516 3.504 1.451a4.96 4.96 0 010 7.008L12 20.508l-8.299-8.299a4.96 4.96 0 010-7.007A4.923 4.923 0 017.205 3.75c1.324 0 2.568.516 3.504 1.451l.76.76.531.531.53-.531.76-.76a4.926 4.926 0 013.504-1.451"
-                ></path>
-            </svg>
+        <svg
+            aria-hidden="true"
+            class="pre-nav-design-icon"
+            focusable="false"
+            viewBox="0 0 24 24"
+            role="img"
+            width="24px"
+            height="24px"
+            fill="none"
+        >
+            <path
+                stroke="currentColor"
+                stroke-width="1.5"
+                d="M16.794 3.75c1.324 0 2.568.516 3.504 1.451a4.96 4.96 0 010 7.008L12 20.508l-8.299-8.299a4.96 4.96 0 010-7.007A4.923 4.923 0 017.205 3.75c1.324 0 2.568.516 3.504 1.451l.76.76.531.531.53-.531.76-.76a4.926 4.926 0 013.504-1.451"
+            ></path>
+        </svg>
         // </Link>
     );
 };
@@ -328,6 +328,61 @@ export const HamburgerIcon = () => {
                 stroke-width="1.5"
                 d="M21 5.25H3M21 12H3m18 6.75H3"
             ></path>
+        </svg>
+    );
+};
+
+export const FilterIcon = () => {
+    return (
+        <svg
+            aria-hidden="true"
+            class="icon-filter-ds"
+            focusable="false"
+            viewBox="0 0 24 24"
+            role="img"
+            width="24px"
+            height="24px"
+            fill="none"
+        >
+            <path
+                stroke="currentColor"
+                stroke-width="1.5"
+                d="M21 8.25H10m-5.25 0H3"
+            ></path>
+            <path
+                stroke="currentColor"
+                stroke-width="1.5"
+                d="M7.5 6v0a2.25 2.25 0 100 4.5 2.25 2.25 0 000-4.5z"
+                clip-rule="evenodd"
+            ></path>
+            <path
+                stroke="currentColor"
+                stroke-width="1.5"
+                d="M3 15.75h10.75m5 0H21"
+            ></path>
+            <path
+                stroke="currentColor"
+                stroke-width="1.5"
+                d="M16.5 13.5v0a2.25 2.25 0 100 4.5 2.25 2.25 0 000-4.5z"
+                clip-rule="evenodd"
+            ></path>
+        </svg>
+    );
+};
+
+export const CheckMarkIcon = () => {
+    return (
+        <svg
+            className="absolute w-[14px] h-[14px] mt-[2px] ml-[2px] hidden peer-checked:block pointer-events-none"
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="white"
+            stroke-width="4"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+        >
+            <polyline points="20 6 9 17 4 12"></polyline>
         </svg>
     );
 };

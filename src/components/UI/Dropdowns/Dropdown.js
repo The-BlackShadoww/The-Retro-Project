@@ -73,7 +73,7 @@ export const Dropdown = ({ title, children }) => {
                 onClick={handleDropdown}
                 className="flex justify-between items-center cursor-pointer md:cursor-default"
             >
-                <h6 className="text-sm md:text-[10px] md:mb-2">{title}</h6>
+                <h6 className="text-sm  md:mb-2">{title}</h6>
                 <span className="md:hidden">
                     {openDropdown ? <RxMinus /> : <RxPlus />}
                 </span>

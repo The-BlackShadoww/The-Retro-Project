@@ -18,6 +18,7 @@ const Men = () => {
     const data = useSelector(selectAllGenderProduct);
 
     const dataForMen = data.filter((item) => item.gender === "men");
+    console.log(dataForMen);
 
     let content;
 
