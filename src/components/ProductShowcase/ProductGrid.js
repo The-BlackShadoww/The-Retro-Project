@@ -1,8 +1,31 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { ProductImg } from "../UI/Media/AdvancedImg";
 import { Link } from "react-router-dom";
 
 const ProductGrid = ({ data, isFilter }) => {
+    const [windowWidth, setWindowWidth] = useState(window.innerWidth);
+
+    const handleResize = () => {
+        setWindowWidth(window.innerWidth);
+    };
+
+    useEffect(() => {
+        window.addEventListener("resize", handleResize);
+
+        return () => {
+            window.removeEventListener("resize", handleResize);
+        };
+    }, []);
+
+    let dynamicWidth;
+    if (windowWidth <= 960) {
+        dynamicWidth = { width: "100%" };
+    } else {
+        dynamicWidth = isFilter
+            ? { width: "calc(100% - 240px)" }
+            : { width: "100%" };
+    }
+
     let content = data.map((i) => (
         <Link to={i.path} key={i.id}>
             <div>
@@ -24,10 +47,8 @@ const ProductGrid = ({ data, isFilter }) => {
 
     return (
         <div
-            style={
-                isFilter ? { width: "calc(100% - 240px)" } : { width: "100%" }
-            }
-            className={`ml-auto mb-14 grid tablet:grid-cols-3 grid-cols-2 tablet:gap-x-4 gap-x-2 gap-y-14`}
+            style={dynamicWidth}
+            className={`ml-auto mb-14 grid tablet:grid-cols-3 grid-cols-2 tablet:gap-x-4 gap-x-2 gap-y-14 tablet:`}
         >
             {content}
         </div>

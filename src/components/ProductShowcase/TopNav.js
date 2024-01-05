@@ -1,6 +1,7 @@
 import React from "react";
 import { RxCaretDown, RxCaretUp } from "react-icons/rx";
 import { FilterIcon } from "../../assests/icons/Icons";
+import { Link } from "react-router-dom";
 
 const TopNav = ({
     scrollY,
@@ -13,8 +14,10 @@ const TopNav = ({
     return (
         <div
             className={`flex tablet:flex-row flex-col tablet:px-0 px-4  tablet:items-center w-full tablet:h-[60px] h-auto ${
-                scrollY >= 20 ? "fixed top-0 z-10" : "relative"
-            }  bg-white`}
+                scrollY >= 20
+                    ? "fixed top-0 left-0 tablet:px-[3rem]  z-10"
+                    : "relative"
+            } tablet:border-none border-b-2 bg-white`}
         >
             <div>
                 <h1 className="text-2xl font-medium">
@@ -22,15 +25,23 @@ const TopNav = ({
                 </h1>
             </div>
             {/* Nav */}
-            <div className="flex justify-center flex-grow-[1] ">
-                <nav>
-                    <ul>
-                        <li>CategoryNav</li>
+            <div className="flex justify-start flex-grow-[1] mt-7 pb-4">
+                <nav className="tablet:hidden block">
+                    <ul className="flex">
+                        <li className="pr-5 font-semibold  hover:opacity-50">
+                            <Link>Clothings</Link>
+                        </li>
+                        <li className="pr-5 font-semibold  hover:opacity-50">
+                            <Link>Shoes</Link>
+                        </li>
+                        <li className="pr-5 font-semibold hover:opacity-50">
+                            <Link>Accessories</Link>
+                        </li>
                     </ul>
                 </nav>
             </div>
             {/* Top Navigation */}
-            <div className="flex items-center ">
+            <div className="tablet:flex hidden items-center">
                 <button
                     className="flex items-center mr-6 text-lg"
                     onClick={handleFilter}
