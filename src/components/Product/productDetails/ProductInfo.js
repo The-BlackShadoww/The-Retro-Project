@@ -1,5 +1,6 @@
 import React from "react";
 import { HeartIcon } from "../../../assests/icons/Icons";
+import { LargeButtonBlack, LargeButtonWhite } from "../../UI/Buttons/Button";
 
 const ProductInfo = ({ formControl, handelModal }) => {
     return (
@@ -73,13 +74,15 @@ const ProductInfo = ({ formControl, handelModal }) => {
                             </fieldset>
                         </div>
                         <div className="pt-12">
-                            <button className="w-full bg-black text-white text-lg font-semibold p-4 my-3 rounded-full hover:opacity-50">
+                            <LargeButtonBlack path="">
                                 Add to Bag
-                            </button>
-                            <button className="w-full bg-white text-black text-lg font-semibold p-4 border border-gray-200 rounded-full flex justify-center items-center hover:border-black">
-                                <span className="pr-3">Favorite</span>
-                                <HeartIcon />
-                            </button>
+                            </LargeButtonBlack>
+                            <LargeButtonWhite>
+                                <span className="flex">
+                                    <span className="pr-3">Favorite</span>
+                                    <HeartIcon />
+                                </span>
+                            </LargeButtonWhite>
                             <div className="pt-8">
                                 <p className="font-semibold">
                                     Lorem ipsum dolor sit amet consectetur

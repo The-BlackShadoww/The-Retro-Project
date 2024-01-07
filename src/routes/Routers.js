@@ -8,6 +8,7 @@ import Kids from "../pages/Kids/Kids";
 // import NewFeatured from "../pages/Product/NewFeatured";
 import Product from "../pages/Product/Product";
 import SingleProduct from "../pages/Product/SingleProduct";
+import Bag from "../pages/Bag/Bag";
 
 const Routers = () => {
     return (
@@ -22,6 +23,7 @@ const Routers = () => {
                     {/* <Route path="new" element={<NewFeatured />} /> */}
                     <Route path="product" element={<Product />} />
                     <Route path="singleProduct" element={<SingleProduct />} />
+                    <Route path="bag" element={<Bag />} />
                 </Route>
             </Routes>
         </div>
