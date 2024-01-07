@@ -1,22 +1,8 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 import { ProductImg } from "../UI/Media/AdvancedImg";
 import { Link } from "react-router-dom";
 
-const ProductGrid = ({ data, isFilter }) => {
-    const [windowWidth, setWindowWidth] = useState(window.innerWidth);
-
-    const handleResize = () => {
-        setWindowWidth(window.innerWidth);
-    };
-
-    useEffect(() => {
-        window.addEventListener("resize", handleResize);
-
-        return () => {
-            window.removeEventListener("resize", handleResize);
-        };
-    }, []);
-
+const ProductGrid = ({ data, isFilter, windowWidth }) => {
     let dynamicWidth;
     if (windowWidth <= 960) {
         dynamicWidth = { width: "100%" };

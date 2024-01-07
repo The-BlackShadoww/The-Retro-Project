@@ -10,7 +10,7 @@ const DropdownLinks = () => {
             <ul className="w-[100% - 680px] max-w-[1255px] h-[60px] flex justify-center items-center mx-auto overflow-hidden Poppins">
                 {/* New and Featured */}
                 <div>
-                    <Dropdown title={"New & Featured"} path={"/new"}>
+                    <Dropdown title={"New & Featured"} path={"product"}>
                         <div className="flex flex-col text-left">
                             <Link to="" className="font-bold">
                                 Winter Sale

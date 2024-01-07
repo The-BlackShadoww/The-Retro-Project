@@ -15,6 +15,7 @@ export const apiSlice = createApi({
         "community",
         "allGenderProducts",
         "newFeaturedProducts",
+        "products",
     ], //* its updates the data when changed
     endpoints: (builder) => ({}),
 });

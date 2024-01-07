@@ -5,7 +5,9 @@ import Home from "../pages/Home/Home";
 import Men from "../pages/Men/Men";
 import Women from "../pages/Women/Women";
 import Kids from "../pages/Kids/Kids";
-import NewFeatured from "../pages/Product/NewFeatured";
+// import NewFeatured from "../pages/Product/NewFeatured";
+import Product from "../pages/Product/Product";
+import SingleProduct from "../pages/Product/SingleProduct";
 
 const Routers = () => {
     return (
@@ -17,7 +19,9 @@ const Routers = () => {
                     <Route path="men" element={<Men />} />
                     <Route path="women" element={<Women />} />
                     <Route path="kids" element={<Kids />} />
-                    <Route path="new" element={<NewFeatured />} />
+                    {/* <Route path="new" element={<NewFeatured />} /> */}
+                    <Route path="product" element={<Product />} />
+                    <Route path="singleProduct" element={<SingleProduct />} />
                 </Route>
             </Routes>
         </div>
