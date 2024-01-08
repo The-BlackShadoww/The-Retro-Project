@@ -106,3 +106,17 @@ export const ProductImg = ({ img }) => {
 //         />
 //     );
 // };
+
+export const GeneralProductImg = ({ img }) => {
+    return (
+        <AdvancedImage
+            cldImg={cld
+                .image(img)
+                .resize(Resize.fill().width(1200).height(1280)) // Set maximum width and height
+                .resize(Resize.crop().width(1200).height(1280).gravity("auto"))
+                .quality("auto")
+                .format("auto")}
+            // className="full-width-height-image"
+        />
+    );
+};

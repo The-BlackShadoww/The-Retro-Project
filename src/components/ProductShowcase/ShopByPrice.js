@@ -1,66 +1,68 @@
 import React from "react";
-import { CheckMarkIcon } from "../../assests/icons/Icons";
+import { Checkbox } from "../UI/Form/Checkbox";
 
-const ShopByPrice = () => {
+const ShopByPrice = ({
+    is0_25Checked,
+    is25_50Checked,
+    is50_100Checked,
+    isOver100Checked,
+    handleCheck,
+}) => {
+    const data = {
+        is0_25Checked: is0_25Checked,
+        is25_50Checked: is25_50Checked,
+        is50_100Checked: is50_100Checked,
+        isOver100Checked: isOver100Checked,
+    };
+    console.log(data);
+    
     return (
         <div className={`pt-3 pb-6 font-medium`}>
             <h4>Shop By Price</h4>
             <ul className="pt-4">
-                <li className="flex cursor-pointer">
-                    <input
-                        type="checkbox"
-                        id="checkboxFor0-25"
-                        className="relative peer shrink-0 w-[18px] h-[18px] appearance-none border border-gray-400 rounded-sm bg-white  checked:bg-black checked:border-0 outline-none cursor-pointer"
+                <li>
+                    <Checkbox
+                        label={"$0 - $25"}
+                        id={"0_25"}
+                        name={"0_25"}
+                        value={is0_25Checked}
+                        pl={"8px"}
+                        isChecked={is0_25Checked}
+                        onChange={handleCheck}
                     />
-                    <label
-                        for="checkboxFor0-25"
-                        className="pl-2 cursor-pointer hover:opacity-50"
-                    >
-                        $0 - $25
-                    </label>
-                    <CheckMarkIcon />
                 </li>
-                <li className="flex cursor-pointer">
-                    <input
-                        type="checkbox"
-                        id="checkboxFor25-50"
-                        className="relative peer shrink-0 w-[18px] h-[18px] appearance-none border border-gray-400 rounded-sm bg-white  checked:bg-black checked:border-0 outline-none cursor-pointer"
+                <li>
+                    <Checkbox
+                        label={"$25 - $50"}
+                        id={"25_50"}
+                        name={"25_50"}
+                        value={is25_50Checked}
+                        pl={"8px"}
+                        isChecked={is25_50Checked}
+                        onChange={handleCheck}
                     />
-                    <label
-                        for="checkboxFor25-50"
-                        className="pl-2 cursor-pointer hover:opacity-50"
-                    >
-                        $25 - $50
-                    </label>
-                    <CheckMarkIcon />
                 </li>
-                <li className="flex cursor-pointer">
-                    <input
-                        type="checkbox"
-                        id="checkboxFor50-100"
-                        className="relative peer shrink-0 w-[18px] h-[18px] appearance-none border border-gray-400 rounded-sm bg-white  checked:bg-black checked:border-0 outline-none cursor-pointer"
+                <li>
+                    <Checkbox
+                        label={"$50 - $100"}
+                        id={"50_100"}
+                        name={"50_100"}
+                        value={is50_100Checked}
+                        pl={"8px"}
+                        isChecked={is50_100Checked}
+                        onChange={handleCheck}
                     />
-                    <label
-                        for="checkboxFor50-100"
-                        className="pl-2 cursor-pointer hover:opacity-50"
-                    >
-                        $50 - $100
-                    </label>
-                    <CheckMarkIcon />
-                </li>{" "}
-                <li className="flex cursor-pointer">
-                    <input
-                        type="checkbox"
-                        id="checkboxForOver100"
-                        className="relative peer shrink-0 w-[18px] h-[18px] appearance-none border border-gray-400 rounded-sm bg-white  checked:bg-black checked:border-0 outline-none cursor-pointer"
+                </li>
+                <li>
+                    <Checkbox
+                        label={"over $100"}
+                        id={"over_100"}
+                        name={"over_100"}
+                        value={isOver100Checked}
+                        pl={"8px"}
+                        isChecked={isOver100Checked}
+                        onChange={handleCheck}
                     />
-                    <label
-                        for="checkboxForOver100"
-                        className="pl-2 cursor-pointer hover:opacity-50"
-                    >
-                        over $100
-                    </label>
-                    <CheckMarkIcon />
                 </li>
             </ul>
         </div>

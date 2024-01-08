@@ -1,146 +1,155 @@
 import React, { useState } from "react";
-import { CheckMarkIcon } from "../../assests/icons/Icons";
 import { Link } from "react-router-dom";
-import { LuEye, LuEyeOff } from "react-icons/lu";
+import { Input, InputPassword } from "../UI/Form/Input";
+import { SubmitButton } from "../UI/Form/Button";
+import { Checkbox } from "../UI/Form/Checkbox";
 
 const Registration = () => {
-    const [showPassword, setShowPassword] = useState(false);
-    const passwordController = () => {
-        setShowPassword(!showPassword);
+    const [email, setEmail] = useState("");
+    const [password, setPassword] = useState("");
+    const [firstName, setFirstName] = useState("");
+    const [lastName, setLastName] = useState("");
+    const [dob, setDob] = useState("");
+    // Checkbox state
+    const [isAgreed, setIsAgreed] = useState(false);
+    const [isGetUpdate, setIsGetUpdate] = useState(false);
+
+    const data = {
+        email: email,
+        password: password,
+        firstName: firstName,
+        lastName: lastName,
+        dob: dob,
+        isAgreed: isAgreed,
+        isGetUpdate: isGetUpdate,
+    };
+    console.log(data);
+
+    const handleChange = (e) => {
+        // e.preventDefault();
+
+        let value = e.target.value;
+
+        let name = e.target.name;
+
+        if (name === "email") {
+            setEmail(value);
+        } else if (name === "password") {
+            setPassword(value);
+        } else if (name === "firstName") {
+            setFirstName(value);
+        } else if (name === "lastName") {
+            setLastName(value);
+        } else if (name === "dob") {
+            setDob(value);
+        } else if (name === "update") {
+            setIsGetUpdate(e.target.checked);
+        } else if (name === "agreement") {
+            setIsAgreed(e.target.checked);
+        }
+    };
+
+    const submitHandler = (e) => {
+        e.preventDefault();
     };
 
     return (
         <main>
-            <div className="max-w-[500px] h-auto mt-8 px-4 mx-auto flex flex-col">
-                <div>
-                    <h1 className="text-4xl font-bold">
-                        Now let's make you a Retro Member
-                    </h1>
-                </div>
-                <div className="mt-8">
-                    <div className="relative w-full  rounded-lg border  mt-8 border-black">
-                        <input
-                            type="email"
-                            id="email"
-                            className="w-full bg-transparent outline-none px-4 py-3 "
-                        />
-                        <label
-                            for="email"
-                            className="absolute top-[-50%] translate-y-[50%] left-2 px-[5px] text-[14px] font-medium text-gray-500 bg-white"
-                        >
-                            E-mail
-                        </label>
-                    </div>
-                    <div className="flex gap-4">
-                        <div className="relative w-full  rounded-lg border mt-8 border-black">
-                            <input
-                                type="text"
-                                id="firstName"
-                                className="w-full bg-transparent outline-none px-4 py-3 "
+            <div className="flex justify-center w-full h-full">
+                <div className="max-w-[460px] h-auto mt-8 mx-[36px] flex flex-col">
+                    <header>
+                        <h1 className="text-4xl font-bold">
+                            Now let's make you a Retro Member
+                        </h1>
+                    </header>
+                    <form onSubmit={submitHandler}>
+                        <div className="mt-8">
+                            <Input
+                                type={"email"}
+                                id={"email"}
+                                name={"email"}
+                                value={email}
+                                onChange={handleChange}
+                                label={"E-mail"}
                             />
-                            <label
-                                for="firstName"
-                                className="absolute top-[-50%] translate-y-[50%] left-2 px-[5px] text-[14px] font-medium text-gray-500 bg-white"
-                            >
-                                First Name
-                            </label>
+                            <div className="flex gap-4">
+                                <Input
+                                    type={"text"}
+                                    id={"firstName"}
+                                    name={"firstName"}
+                                    value={firstName}
+                                    onChange={handleChange}
+                                    label={"First Name"}
+                                />
+                                <Input
+                                    type={"text"}
+                                    id={"lastName"}
+                                    name={"lastName"}
+                                    value={lastName}
+                                    onChange={handleChange}
+                                    label={"Last Name"}
+                                />
+                            </div>
+                            <InputPassword
+                                type={"password"}
+                                id={"#password"}
+                                name={"password"}
+                                value={password}
+                                onChange={handleChange}
+                                label={"Password"}
+                            />
+                            <Input
+                                type={"date"}
+                                id={"#dob"}
+                                name={"dob"}
+                                value={dob}
+                                onChange={handleChange}
+                                label={"Date of Birth"}
+                            />
                         </div>
-                        <div className="relative w-full  rounded-lg border mt-8 border-black">
-                            <input
-                                type="text"
-                                id="lastName"
-                                className="w-full bg-transparent outline-none px-4 py-3 "
-                            />
-                            <label
-                                for="lastName"
-                                className="absolute top-[-50%] translate-y-[50%] left-2 px-[5px] text-[14px] font-medium text-gray-500 bg-white"
-                            >
-                                Last Name
-                            </label>
+                        {/* checkbox */}
+                        <div>
+                            <ul className="">
+                                <li className="mt-12">
+                                    <Checkbox
+                                        label={
+                                            "Sign up for emails to get updates fromRetro on products, offers and your membership benefits"
+                                        }
+                                        id={"update"}
+                                        name={"update"}
+                                        value={isGetUpdate}
+                                        isChecked={isGetUpdate}
+                                        onChange={handleChange}
+                                        pl={"20px"}
+                                    />
+                                </li>
+                                <li className="mt-12">
+                                    <Checkbox
+                                        id={"agreement"}
+                                        name={"agreement"}
+                                        value={isAgreed}
+                                        isChecked={isAgreed}
+                                        onChange={handleChange}
+                                        pl={"20px"}
+                                    >
+                                        I agree to Retro's
+                                        <span>
+                                            <Link to="" className="underline">
+                                                Privacy Policy
+                                            </Link>
+                                        </span>
+                                        and{" "}
+                                        <span>
+                                            <Link to="" className="underline">
+                                                Terms of Use
+                                            </Link>
+                                        </span>
+                                    </Checkbox>
+                                </li>
+                            </ul>
                         </div>
-                    </div>
-                    <div className="relative w-full flex items-center  rounded-lg border mt-8 border-black">
-                        <input
-                            type={showPassword ? "text" : "password"}
-                            id="password"
-                            className="w-[92.5%] bg-transparent outline-none px-4 py-3 "
-                        />
-                        <label
-                            for="password"
-                            className="absolute top-[-50%] translate-y-[50%] left-2 px-[5px] text-[14px] font-medium text-gray-500 bg-white"
-                        >
-                            Password
-                        </label>
-                        <span
-                            className="cursor-pointer"
-                            onClick={passwordController}
-                        >
-                            {showPassword ? <LuEyeOff /> : <LuEye />}
-                        </span>
-                    </div>
-                    <div className="relative w-full  rounded-lg border mt-8 border-black">
-                        <input
-                            type="date"
-                            id="password"
-                            className="w-full bg-transparent outline-none px-4 py-3 "
-                        />
-                        <label
-                            for="password"
-                            className="absolute top-[-50%] translate-y-[50%] left-2 px-[5px] text-[14px] font-medium text-gray-500 bg-white"
-                        >
-                            Date of Birth
-                        </label>
-                    </div>
-                </div>
-                {/* checkbox */}
-                <div>
-                    <ul className="">
-                        <li className="flex items-start mt-12 ">
-                            <input
-                                type="checkbox"
-                                id="singUpForEmail"
-                                className="relative peer shrink-0 w-[18px] h-[18px]  appearance-none border border-gray-400 rounded-sm bg-white  checked:bg-black checked:border-0 outline-none cursor-pointer"
-                            />
-                            <label
-                                for="singUpForEmail"
-                                className="pl-5  font-medium"
-                            >
-                                Sign up for emails to get updates from Retro on
-                                products, offers and your membership benefits
-                            </label>
-                            <CheckMarkIcon />
-                        </li>
-                        <li className="flex items-start mt-12 ">
-                            <input
-                                type="checkbox"
-                                id="singUpForEmail"
-                                className="relative peer shrink-0 w-[18px] h-[18px]  appearance-none border border-gray-400 rounded-sm bg-white  checked:bg-black checked:border-0 outline-none cursor-pointer"
-                            />
-                            <label
-                                for="singUpForEmail"
-                                className="pl-5  font-medium"
-                            >
-                                I agree to Retro's{" "}
-                                <span>
-                                    <Link to="" className="underline">
-                                        Privacy Policy{" "}
-                                    </Link>
-                                </span>
-                                and{" "}
-                                <span>
-                                    <Link to="" className="underline">
-                                        Terms of Use
-                                    </Link>
-                                </span>
-                            </label>
-                            <CheckMarkIcon />
-                        </li>
-                    </ul>
-                </div>
-                <div className="w-full flex justify-end mt-8">
-                    <button className="px-7 py-[10px] rounded-full text-white font-medium bg-black hover:opacity-50">
-                        Create Account
-                    </button>
+                        <SubmitButton title={"Create Account"} />
+                    </form>
                 </div>
             </div>
         </main>

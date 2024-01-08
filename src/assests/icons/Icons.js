@@ -209,25 +209,23 @@ export const MagnifyingGlassIcon = () => {
 
 export const PersonIcon = () => {
     return (
-        <span className="mx-2 cursor-pointer">
-            <svg
-                aria-hidden="true"
-                class="pre-nav-design-icon"
-                focusable="false"
-                viewBox="0 0 24 24"
-                role="img"
-                width="24px"
-                height="24px"
-                fill="none"
-                data-var="glyph"
-                // style="display: inline-block;"
-            >
-                <path
-                    fill="currentColor"
-                    d="M12 3a4.5 4.5 0 00-4.5 4.5H9a3 3 0 013-3V3zM7.5 7.5A4.5 4.5 0 0012 12v-1.5a3 3 0 01-3-3H7.5zM12 12a4.5 4.5 0 004.5-4.5H15a3 3 0 01-3 3V12zm4.5-4.5A4.5 4.5 0 0012 3v1.5a3 3 0 013 3h1.5zM4.5 21v-3H3v3h1.5zm0-3a3 3 0 013-3v-1.5A4.5 4.5 0 003 18h1.5zm3-3h9v-1.5h-9V15zm9 0a3 3 0 013 3H21a4.5 4.5 0 00-4.5-4.5V15zm3 3v3H21v-3h-1.5z"
-                ></path>
-            </svg>
-        </span>
+        <svg
+            aria-hidden="true"
+            class="pre-nav-design-icon"
+            focusable="false"
+            viewBox="0 0 24 24"
+            role="img"
+            width="24px"
+            height="24px"
+            fill="none"
+            data-var="glyph"
+            // style="display: inline-block;"
+        >
+            <path
+                fill="currentColor"
+                d="M12 3a4.5 4.5 0 00-4.5 4.5H9a3 3 0 013-3V3zM7.5 7.5A4.5 4.5 0 0012 12v-1.5a3 3 0 01-3-3H7.5zM12 12a4.5 4.5 0 004.5-4.5H15a3 3 0 01-3 3V12zm4.5-4.5A4.5 4.5 0 0012 3v1.5a3 3 0 013 3h1.5zM4.5 21v-3H3v3h1.5zm0-3a3 3 0 013-3v-1.5A4.5 4.5 0 003 18h1.5zm3-3h9v-1.5h-9V15zm9 0a3 3 0 013 3H21a4.5 4.5 0 00-4.5-4.5V15zm3 3v3H21v-3h-1.5z"
+            ></path>
+        </svg>
     );
 };
 
@@ -401,6 +399,58 @@ export const BinIcon = () => {
                 stroke-miterlimit="10"
                 stroke-width="1.5"
                 d="M14.25 7.5v12m-4.5-12v12M5.25 6v13.5c0 1.24 1.01 2.25 2.25 2.25h9c1.24 0 2.25-1.01 2.25-2.25V5.25h2.75m-2.75 0H21m-12-3h5.25c.83 0 1.5.67 1.5 1.5s-.67 1.5-1.5 1.5H3"
+            ></path>
+        </svg>
+    );
+};
+
+export const WalletIcon = () => {
+    return (
+        <svg
+            aria-hidden="true"
+            focusable="false"
+            viewBox="0 0 48 48"
+            role="img"
+            width="24px"
+            height="24px"
+            fill="none"
+        >
+            <path
+                stroke="currentColor"
+                stroke-width="3"
+                d="M36 37.5H12A4.502 4.502 0 017.5 33V15a4.5 4.5 0 014.5-4.5h24a4.5 4.5 0 014.5 4.5v18c0 2.484-2.016 4.5-4.5 4.5z"
+                clip-rule="evenodd"
+            ></path>
+            <path
+                stroke="currentColor"
+                stroke-width="3"
+                d="M7.5 19.5h33"
+            ></path>
+        </svg>
+    );
+};
+
+export const LinkIcon = () => {
+    return (
+        <svg
+            aria-hidden="true"
+            focusable="false"
+            viewBox="0 0 48 48"
+            role="img"
+            width="24px"
+            height="24px"
+            fill="none"
+        >
+            <path
+                stroke="currentColor"
+                stroke-width="3"
+                d="M40.5 12a4.5 4.5 0 11-9 0 4.5 4.5 0 019 0zm0 24a4.5 4.5 0 11-9 0 4.5 4.5 0 019 0zm-24-12a4.5 4.5 0 11-9 0 4.5 4.5 0 019 0z"
+                clip-rule="evenodd"
+            ></path>
+            <path
+                stroke="currentColor"
+                stroke-width="3"
+                d="M16.025 26.013L32 34m-.025-19.987l-15.95 7.974"
             ></path>
         </svg>
     );

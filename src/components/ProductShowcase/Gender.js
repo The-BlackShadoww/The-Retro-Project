@@ -1,53 +1,55 @@
 import React from "react";
-import { CheckMarkIcon } from "../../assests/icons/Icons";
+import { Checkbox } from "../UI/Form/Checkbox";
 
-const Gender = () => {
+const Gender = ({
+    isMenChecked,
+    isWomenChecked,
+    isKidsChecked,
+    handleCheck,
+}) => {
+    const data = {
+        isMenChecked: isMenChecked,
+        isWomenChecked: isWomenChecked,
+        isKidsChecked: isKidsChecked,
+    };
+    console.log(data);
+
     return (
         <div className={`pt-3 pb-6 font-medium`}>
             <h4>Gender</h4>
             <ul className="pt-4">
-                <li className="flex cursor-pointer">
-                    <input
-                        type="checkbox"
-                        id="checkboxForMen"
-                        className="relative peer shrink-0 w-[18px] h-[18px] appearance-none border border-gray-400 rounded-sm bg-white  checked:bg-black checked:border-0 outline-none cursor-pointer"
+                <li className="cursor-pointer">
+                    <Checkbox
+                        label={"Men"}
+                        id={"men"}
+                        name={"men"}
+                        value={isMenChecked}
+                        pl={"8px"}
+                        isChecked={isMenChecked}
+                        onChange={handleCheck}
                     />
-                    <label
-                        for="checkboxForMen"
-                        className="pl-2 cursor-pointer hover:opacity-50 "
-                    >
-                        Men
-                    </label>
-                    <CheckMarkIcon />
                 </li>
-
-                <li className="flex cursor-pointer">
-                    <input
-                        type="checkbox"
-                        id="checkboxForWomen"
-                        className="relative peer shrink-0 w-[18px] h-[18px] appearance-none border border-gray-400 rounded-sm bg-white  checked:bg-black checked:border-0 outline-none cursor-pointer"
+                <li className="cursor-pointer">
+                    <Checkbox
+                        label={"Women"}
+                        id={"women"}
+                        name={"women"}
+                        value={isWomenChecked}
+                        pl={"8px"}
+                        isChecked={isWomenChecked}
+                        onChange={handleCheck}
                     />
-                    <label
-                        for="checkboxForWomen"
-                        className="pl-2 cursor-pointer hover:opacity-50"
-                    >
-                        Women
-                    </label>
-                    <CheckMarkIcon />
                 </li>
-                <li className="flex cursor-pointer">
-                    <input
-                        type="checkbox"
-                        id="checkboxForKids"
-                        className="relative peer shrink-0 w-[18px] h-[18px] appearance-none border border-gray-400 rounded-sm bg-white  checked:bg-black checked:border-0 outline-none cursor-pointer"
+                <li className="cursor-pointer">
+                    <Checkbox
+                        label={"Kids"}
+                        id={"kids"}
+                        name={"kids"}
+                        value={isKidsChecked}
+                        pl={"8px"}
+                        isChecked={isKidsChecked}
+                        onChange={handleCheck}
                     />
-                    <label
-                        for="checkboxForKids"
-                        className="pl-2 cursor-pointer hover:opacity-50"
-                    >
-                        Kid
-                    </label>
-                    <CheckMarkIcon />
                 </li>
             </ul>
         </div>

@@ -5,7 +5,10 @@ const TopNav = () => {
     return (
         <div className="w-full px-10 py-2 flex justify-end bg-[#f5f5f5]">
             <p className="font-medium text-sm pr-4">Hi, user name</p>
-            <Link to="/auth">
+            <Link to="/auth" className="font-medium text-sm pr-4">
+                Login
+            </Link>
+            <Link to="/member/profile">
                 <span>
                     <svg
                         aria-hidden="true"
