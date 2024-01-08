@@ -3,6 +3,7 @@ import { Outlet } from "react-router-dom";
 import "../assests/styles/global.css";
 import Footer from "../components/Footer/Footer";
 import Navbar from "../components/Navbar/Navbar";
+import TopNav from "../components/TopNav/TopNav";
 
 const Layout = () => {
     return (
@@ -10,6 +11,7 @@ const Layout = () => {
             <div>
                 {/* Be careful about the p-4 padding in every component */}
                 <div className="tablet:p-0 md:p-0">
+                    <TopNav />
                     <Navbar />
                 </div>
                 <div>

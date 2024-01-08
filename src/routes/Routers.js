@@ -9,6 +9,7 @@ import Kids from "../pages/Kids/Kids";
 import Product from "../pages/Product/Product";
 import SingleProduct from "../pages/Product/SingleProduct";
 import Bag from "../pages/Bag/Bag";
+import Auth from "../pages/Auth/Auth";
 
 const Routers = () => {
     return (
@@ -24,6 +25,9 @@ const Routers = () => {
                     <Route path="product" element={<Product />} />
                     <Route path="singleProduct" element={<SingleProduct />} />
                     <Route path="bag" element={<Bag />} />
+                </Route>
+                <Route path="/auth">
+                    <Route index element={<Auth />} />
                 </Route>
             </Routes>
         </div>
