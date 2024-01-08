@@ -4,34 +4,40 @@ import { Link } from "react-router-dom";
 
 const SideNav = () => {
     return (
-        <div className="max-w-[290px] w-full">
+        <div className="tablet:max-w-[290px] w-full">
             <nav>
-                <ul>
-                    <li className="pb-5">
+                <ul className="flex tablet:flex-col flex-row w-full ">
+                    <li className="pb-5 tablet:pr-0 pr-4">
                         <Link to="">
                             <div className="flex items-center">
-                                <PersonIcon />
-                                <p className="pl-5 font-medium">
+                                <div className="mobile:block hidden">
+                                    <PersonIcon />
+                                </div>
+                                <p className="mobile:pl-5 mobile:text-base text-xs font-medium">
                                     Account Details
                                 </p>
                             </div>
                         </Link>
                     </li>
-                    <li className="pb-5">
+                    <li className="pb-5 tablet:pr-0 pr-4">
                         <Link to="payment">
                             <div className="flex items-center">
-                                <WalletIcon />
-                                <p className="pl-5 font-medium">
+                                <div className="mobile:block hidden">
+                                    <WalletIcon />
+                                </div>
+                                <p className="mobile:pl-5 mobile:text-base text-xs font-medium">
                                     Payment Methods
                                 </p>
                             </div>
                         </Link>
                     </li>
-                    <li className="pb-5">
-                        <Link to="">
+                    <li className="pb-5 tablet:pr-0 pr-4">
+                        <Link to="profile-visibility">
                             <div className="flex items-center">
-                                <LinkIcon />
-                                <p className="pl-5 font-medium">
+                                <div className="mobile:block hidden">
+                                    <LinkIcon />
+                                </div>
+                                <p className="tablet:pl-5 mobile:text-base text-xs font-medium">
                                     Profile Visibility
                                 </p>
                             </div>

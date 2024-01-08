@@ -31,7 +31,7 @@ const AccDetails = () => {
     };
 
     return (
-        <div className="max-w-[768px] w-full ml-[140px] mb-20">
+        <div className="max-w-[768px] w-full xl:mx-[140px] px-0 mb-20">
             <header>
                 <h1 className="text-xl font-medium">Account Details</h1>
             </header>

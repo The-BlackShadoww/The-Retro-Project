@@ -19,6 +19,7 @@ import Favorites from "../components/Memeber/Favorites";
 import Settings from "../components/Memeber/settings/Settings";
 import AccDetails from "../components/Memeber/settings/AccDetails";
 import Payment from "../components/Memeber/settings/Payment";
+import Visibility from "../components/Memeber/settings/Visibility";
 
 const Routers = () => {
     return (
@@ -42,6 +43,10 @@ const Routers = () => {
                         <Route path="settings" element={<Settings />}>
                             <Route index element={<AccDetails />}></Route>
                             <Route path="payment" element={<Payment />}></Route>
+                            <Route
+                                path="profile-visibility"
+                                element={<Visibility />}
+                            ></Route>
                         </Route>
                     </Route>
                 </Route>
