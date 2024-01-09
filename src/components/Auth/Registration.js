@@ -27,9 +27,7 @@ const Registration = () => {
 
     const handleChange = (e) => {
         // e.preventDefault();
-
         let value = e.target.value;
-
         let name = e.target.name;
 
         if (name === "email") {

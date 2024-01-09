@@ -20,6 +20,7 @@ import Settings from "../components/Memeber/settings/Settings";
 import AccDetails from "../components/Memeber/settings/AccDetails";
 import Payment from "../components/Memeber/settings/Payment";
 import Visibility from "../components/Memeber/settings/Visibility";
+import Checkout from "../pages/Checkout/Checkout";
 
 const Routers = () => {
     return (
@@ -34,6 +35,7 @@ const Routers = () => {
                     <Route path="product" element={<Product />} />
                     <Route path="singleProduct" element={<SingleProduct />} />
                     <Route path="bag" element={<Bag />} />
+                    <Route path="checkout" element={<Checkout />} />
                     {/* Member */}
                     <Route path="/member" element={<AccountLayout />}>
                         <Route path="profile" element={<Profile />}></Route>

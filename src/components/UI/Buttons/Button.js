@@ -33,16 +33,22 @@ export const ButtonOutlined = ({ children, path }) => {
 
 export const LargeButtonBlack = ({ children, path }) => {
     return (
-        <button className="w-full bg-black text-white text-lg font-semibold p-4 my-3 rounded-full hover:opacity-50">
-            <Link to={path}>{children}</Link>
-        </button>
+        <Link to={path}>
+            <button className="w-full bg-black text-white text-lg font-semibold p-4 my-3 rounded-full hover:opacity-50">
+                {children}
+            </button>
+        </Link>
     );
 };
 
 export const LargeButtonWhite = ({ children, path }) => {
     return (
-        <button className="w-full bg-white text-black text-lg font-semibold p-4 border border-gray-200 rounded-full flex justify-center items-center hover:border-black">
-            <Link to={path}>{children}</Link>
-        </button>
+        <Link to={path}>
+            <button className="w-full bg-white text-black text-lg font-semibold p-4 border border-gray-200 rounded-full flex justify-center items-center hover:border-black">
+                {children}
+            </button>
+        </Link>
     );
 };
+
+
