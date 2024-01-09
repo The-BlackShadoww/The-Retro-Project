@@ -1,8 +1,10 @@
 import React, { useState } from "react";
+import { useNavigate } from "react-router-dom";
 import Shipping from "./Shipping";
 import InYourBag from "./InYourBag";
 
 const CheckoutDetails = () => {
+    const navigate = useNavigate();
     const [email, setEmail] = useState("");
     const [phoneNumber, setPhoneNumber] = useState("");
     const [firstName, setFirstName] = useState("");
@@ -12,6 +14,15 @@ const CheckoutDetails = () => {
     const [city, setCity] = useState("");
     const [postCode, setPostCode] = useState("");
     const [country, setCountry] = useState("");
+
+    const amount = [
+        {
+            id: 0,
+            subtotal: "---",
+            estimated: "---",
+            total: "---",
+        },
+    ];
 
     const handleChange = (e) => {
         let value = e.target.value;
@@ -53,6 +64,23 @@ const CheckoutDetails = () => {
             country: country,
         };
         console.log(data);
+
+        if (
+            city ||
+            email ||
+            lastName ||
+            address1 ||
+            address2 ||
+            postCode ||
+            firstName ||
+            phoneNumber ||
+            country !== ""
+        ) {
+            navigate("/payment");
+            // redirect("/payment");
+        } else {
+            alert("Fill the form");
+        }
     };
 
     return (
@@ -74,7 +102,7 @@ const CheckoutDetails = () => {
                     handleChange={handleChange}
                     submitHandler={submitHandler}
                 />
-                <InYourBag />
+                <InYourBag data={amount} />
             </div>
         </main>
     );

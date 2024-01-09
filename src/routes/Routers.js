@@ -18,15 +18,19 @@ import Profile from "../components/Memeber/Profile";
 import Favorites from "../components/Memeber/Favorites";
 import Settings from "../components/Memeber/settings/Settings";
 import AccDetails from "../components/Memeber/settings/AccDetails";
-import Payment from "../components/Memeber/settings/Payment";
+import PaymentMethod from "../components/Memeber/settings/PaymentMethod";
 import Visibility from "../components/Memeber/settings/Visibility";
 import Checkout from "../pages/Checkout/Checkout";
+import Payment from "../pages/Payment/Payment";
+// Admin
+import Admin from "../pages/Admin/Admin";
+import AdminDashboard from "../components/Admin/AdminDashboard";
 
 const Routers = () => {
     return (
         <div>
             <Routes>
-                {/* Parent route */}
+                {/*----- Parent route -----*/}
                 <Route path="/" element={<Layout />}>
                     <Route index element={<Home />} />
                     <Route path="men" element={<Men />} />
@@ -36,15 +40,23 @@ const Routers = () => {
                     <Route path="singleProduct" element={<SingleProduct />} />
                     <Route path="bag" element={<Bag />} />
                     <Route path="checkout" element={<Checkout />} />
-                    {/* Member */}
+                    <Route path="payment" element={<Payment />} />
+                    {/*----- Admin -----*/}
+                    <Route path="/admin" element={<Admin />}>
+                        <Route index element={<AdminDashboard />} />
+                    </Route>
+                    {/*----- Member -----*/}
                     <Route path="/member" element={<AccountLayout />}>
                         <Route path="profile" element={<Profile />}></Route>
                         <Route path="order" element={<Orders />}></Route>
                         <Route path="favorites" element={<Favorites />}></Route>
-                        {/* Settings */}
+                        {/*----- Settings -----*/}
                         <Route path="settings" element={<Settings />}>
                             <Route index element={<AccDetails />}></Route>
-                            <Route path="payment" element={<Payment />}></Route>
+                            <Route
+                                path="payment"
+                                element={<PaymentMethod />}
+                            ></Route>
                             <Route
                                 path="profile-visibility"
                                 element={<Visibility />}
@@ -52,7 +64,7 @@ const Routers = () => {
                         </Route>
                     </Route>
                 </Route>
-                {/* Auth routes */}
+                {/*----- Auth routes----- */}
                 <Route path="/auth">
                     <Route index element={<Auth />} />
                     <Route path="resignation" element={<Registration />} />

@@ -18,7 +18,7 @@ const Shipping = ({
     return (
         // <div className="max-w-[1200px] w-full border">
         <div className="basis-[70%] w-full tablet:order-1 order-2">
-            <div className="w-full bg-[#111111] px-4 py-6">
+            <div className="w-full bg-[#111111] px-4 py-4">
                 <h1 className="text-white text-2xl font-bold">Shipping</h1>
             </div>
             <form onSubmit={submitHandler}>
@@ -119,7 +119,10 @@ const Shipping = ({
                         />
                     </div>
                     <div>
-                        <SubmitButton title={"Save & Continue"} />
+                        <SubmitButton
+                            title={"Save & Continue"}
+                            path={"/payment"}
+                        />
                     </div>
                 </div>
             </form>

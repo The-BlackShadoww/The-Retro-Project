@@ -1,7 +1,7 @@
 import React from "react";
 import { Button } from "../../UI/Buttons/Button";
 
-const Payment = () => {
+const PaymentMethod = () => {
     return (
         <div className="max-w-[768px] w-full h-[70vh]">
             <div>
@@ -18,4 +18,4 @@ const Payment = () => {
     );
 };
 
-export default Payment;
+export default PaymentMethod;
