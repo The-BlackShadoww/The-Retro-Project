@@ -41,10 +41,6 @@ const Routers = () => {
                     <Route path="bag" element={<Bag />} />
                     <Route path="checkout" element={<Checkout />} />
                     <Route path="payment" element={<Payment />} />
-                    {/*----- Admin -----*/}
-                    <Route path="/admin" element={<Admin />}>
-                        <Route index element={<AdminDashboard />} />
-                    </Route>
                     {/*----- Member -----*/}
                     <Route path="/member" element={<AccountLayout />}>
                         <Route path="profile" element={<Profile />}></Route>
@@ -68,6 +64,10 @@ const Routers = () => {
                 <Route path="/auth">
                     <Route index element={<Auth />} />
                     <Route path="resignation" element={<Registration />} />
+                </Route>
+                {/*----- Admin -----*/}
+                <Route path="/admin" element={<Admin />}>
+                    <Route index element={<AdminDashboard />} />
                 </Route>
             </Routes>
         </div>
