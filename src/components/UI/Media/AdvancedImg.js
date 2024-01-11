@@ -6,7 +6,9 @@ import "./style.css";
 
 //!--------- General Image ---------
 export const General = ({ img }) => {
-    <AdvancedImage cldImg={cld.image(img)} />;
+    <AdvancedImage
+        cldImg={cld.image(img).resize(Resize.scale().width(500).height(500))}
+    />;
 };
 
 //!--------- Poster Image ---------
@@ -120,3 +122,5 @@ export const GeneralProductImg = ({ img }) => {
         />
     );
 };
+
+//! Profile picture

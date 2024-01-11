@@ -1,23 +1,29 @@
-import React, { useState } from "react";
+import React from "react";
+import { CardImg } from "../UI/Media/AdvancedImg";
 
-const DashNav = () => {
-    const [isNavOpen, setIsNavOpen] = useState(true);
-
-    const handleNav = () => {
-        setIsNavOpen(!isNavOpen);
-    };
-
+const DashNav = ({ isNavOpen, handleNav }) => {
     return (
         <div
-            className={`max-w-[265px] w-full h-screen fixed top-0 ${
-                isNavOpen ? "left-0" : "left-[-265px]"
-            } left-0 px-2 border-r shadow-xl`}
+            className={`${
+                isNavOpen ? "w-[310px]" : "w-[50px]"
+            }  h-screen  fixed top-0 left-0 px-0 z-[100]`}
         >
-            <dvi className="relative w-full h-full">
+            {/* Fix Nav */}
+            <div className="fixed w-[50px] h-full z-[10] overflow-hidden bg-[#f5f5f5]">
+                div
+            </div>
+            {/* The Nav */}
+            <div
+                className={`absolute w-[260px] h-full ${
+                    isNavOpen ? "left-[50px]" : "left-[-210px]"
+                } shadow-xl z-[5] border-r border-gray-300 bg-white transition-all`}
+            >
                 {/* Admin profile */}
-                <div className="w-full h-[60px] relative p-2 border-b">
-                    <div className="flex">
-                        <div className="w-[40px] h-[40px] rounded-full bg-[#000]"></div>
+                <div className="w-full h-[60px] relative p-2 border-b bg-[#f5f5f5]">
+                    <div className="flex items-center">
+                        <div className="w-[40px] h-[40px] rounded-full border-2 overflow-hidden">
+                            <CardImg img={"/Retro/dp"} />
+                        </div>
                         <div className="pl-2 leading-[10px]">
                             <span className="text-base font-semibold">
                                 Admin Name
@@ -28,44 +34,42 @@ const DashNav = () => {
                     </div>
                     <div
                         className={`absolute top-2 ${
-                            isNavOpen ? "right-0" : "-right-9"
+                            isNavOpen ? "-right-5" : "-right-9"
                         }`}
                     >
                         <button
                             onClick={handleNav}
-                            className="p-2 bg-[#757575] rounded-md"
+                            className="w-[35px] h-[35px] bg-black text-white rounded-full "
                         >
                             <span>{isNavOpen ? "<<" : ">>"}</span>
                         </button>
                     </div>
                 </div>
-            </dvi>
+            </div>
         </div>
     );
 };
 
 export default DashNav;
 
-// import React, { useState } from "react";
+// import React from "react";
+// import { CardImg } from "../UI/Media/AdvancedImg";
 
-// const DashNav = () => {
-//     const [isNavOpen, setIsNavOpen] = useState(true);
-
-//     const handleNav = () => {
-//         setIsNavOpen(!isNavOpen);
-//     };
-
+// const DashNav = ({ isNavOpen, handleNav }) => {
 //     return (
 //         <div
-//             className={`w-[15vw] h-screen fixed top-0 ${
-//                 isNavOpen ? "left-0" : "left-[-15vw]"
-//             } left-0 px-2 border-r shadow-xl`}
+//             className={`max-w-[265px] w-full h-screen fixed top-0 ${
+//                 isNavOpen ? "left-0" : "left-[-262px]"
+//             } left-0 px-2 border-r shadow-xl z-[100]`}
 //         >
-//             <dvi className="relative w-full h-full">
+//             {/* This div will get the width 265px */}
+//             <div className="relative w-full h-full">
 //                 {/* Admin profile */}
-//                 <div className="w-full h-[60px] flex justify-between items-center border-b">
-//                     <div className=" flex">
-//                         <div className="w-[40px] h-[40px] rounded-full bg-[#000]"></div>
+//                 <div className="w-full h-[60px] relative p-2 border-b">
+//                     <div className="flex">
+//                         <div className="w-[40px] h-[40px] rounded-full">
+//                             <CardImg img={"/Retro/dp"} />
+//                         </div>
 //                         <div className="pl-2 leading-[10px]">
 //                             <span className="text-base font-semibold">
 //                                 Admin Name
@@ -74,16 +78,20 @@ export default DashNav;
 //                             <span className="text-xs">Admin</span>
 //                         </div>
 //                     </div>
-//                     <div className="">
+//                     <div
+//                         className={`absolute top-2 ${
+//                             isNavOpen ? "right-0" : "-right-9"
+//                         }`}
+//                     >
 //                         <button
 //                             onClick={handleNav}
-//                             className="p-1 border rounded-md"
+//                             className="w-[35px] h-[35px] bg-[#757575] rounded-md"
 //                         >
-//                             <span>{"<<"}</span>
+//                             <span>{isNavOpen ? "<<" : ">>"}</span>
 //                         </button>
 //                     </div>
 //                 </div>
-//             </dvi>
+//             </div>
 //         </div>
 //     );
 // };
