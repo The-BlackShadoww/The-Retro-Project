@@ -25,6 +25,7 @@ import Payment from "../pages/Payment/Payment";
 // Admin
 import Admin from "../pages/Admin/Admin";
 import AdminDashboard from "../components/Admin/AdminDashboard";
+import ProductDashboard from "../components/Admin/Products/ProductDashboard";
 
 const Routers = () => {
     return (
@@ -68,6 +69,7 @@ const Routers = () => {
                 {/*----- Admin -----*/}
                 <Route path="/admin" element={<Admin />}>
                     <Route index element={<AdminDashboard />} />
+                    <Route path="products" element={<ProductDashboard />} />
                 </Route>
             </Routes>
         </div>
