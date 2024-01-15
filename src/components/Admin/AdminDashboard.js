@@ -16,7 +16,7 @@ const AdminDashboard = () => {
                     AdminDashboard
                 </div>
             </div>
-            <div className="w-full mt-10 p-2 bg-indigo-400">
+            <div className="w-full mt-10 p-2 bg-red-400">
                 <h1 className="text-lg font-semibold mb-5">Latest Orders</h1>
             </div>
         </div>
