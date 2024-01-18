@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { Input } from "../../UI/Form/Input";
 import { SubmitButton } from "../../UI/Form/Button";
+import { usePostNewProductMutation } from "../../../services/ReduxRtkQuery/adminSlices/buildProductSlice";
 
 const BuildProduct = () => {
     const [inputs, setInputs] = useState({
@@ -50,8 +51,16 @@ const BuildProduct = () => {
         setInputs({ ...inputs, [e.target.name]: e.target.value });
     };
 
-    const handleSubmit = (e) => {
+    const [postNewProduct] = usePostNewProductMutation();
+
+    const handleSubmit = async (e) => {
         e.preventDefault();
+
+        try {
+            await postNewProduct(inputs);
+        } catch (error) {
+            console.error("Error submitting data:", error);
+        }
     };
 
     return (
@@ -182,7 +191,7 @@ const BuildProduct = () => {
                         disabled={false}
                     />
                 </div>
-                <SubmitButton title={"Create"} disabled={false} />
+                <SubmitButton title={"Build"} disabled={false} />
             </form>
         </div>
     );
