@@ -79,7 +79,18 @@ const BuildProduct = () => {
                         value={name}
                         disabled={false}
                     />
-                    <Input
+                    <select
+                        className="relative w-full rounded-lg border mt-8 border-black px-4 py-3"
+                        onChange={handleProduct}
+                    >
+                        <option value="Category" className="hidden">
+                            Category
+                        </option>
+                        <option value="shoes">Shoes</option>
+                        <option value="cloths">Cloths</option>
+                        <option value="accessories">Accessories</option>
+                    </select>
+                    {/* <Input
                         type={"text"}
                         id={"p_category"}
                         name={"category"}
@@ -87,7 +98,7 @@ const BuildProduct = () => {
                         onChange={handleProduct}
                         value={category}
                         disabled={false}
-                    />
+                    /> */}
                     <Input
                         type={"number"}
                         id={"p_price"}

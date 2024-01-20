@@ -12,6 +12,7 @@ export const postProductApiSlice = apiSlice2.injectEndpoints({
                 url: "/products",
                 method: "POST",
                 body: postData,
+                // headers:{}
             }),
             transformResponse: (responseData) => {
                 return buildProductAdapter.setAll(initialState, responseData);

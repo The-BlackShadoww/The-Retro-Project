@@ -26,6 +26,7 @@ import Payment from "../pages/Payment/Payment";
 import Admin from "../pages/Admin/Admin";
 import AdminDashboard from "../components/Admin/AdminDashboard";
 import ProductDashboard from "../components/Admin/Products/ProductDashboard";
+import Category from "../components/Admin/Category/Category";
 
 const Routers = () => {
     return (
@@ -70,6 +71,7 @@ const Routers = () => {
                 <Route path="/admin" element={<Admin />}>
                     <Route index element={<AdminDashboard />} />
                     <Route path="products" element={<ProductDashboard />} />
+                    <Route path="category" element={<Category />} />
                 </Route>
             </Routes>
         </div>
